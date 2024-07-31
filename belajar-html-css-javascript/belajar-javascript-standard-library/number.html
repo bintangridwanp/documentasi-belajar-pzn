@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number</title>
+</head>
+<body>
+<script>
+    // Mengubah string "12345" menjadi tipe data Number
+    const masukan = "12345";
+    const number = Number(masukan);
+
+    // Menampilkan tipe data dari variabel masukan (string)
+    console.info(typeof masukan); // string
+
+    // Menampilkan tipe data dari variabel number (number)
+    console.info(typeof number); // number
+
+    // Menampilkan nilai dari variabel number (12345)
+    console.info(number); // 12345
+
+    // Mencoba mengubah string yang bukan angka menjadi Number, hasilnya NaN (Not a Number)
+    console.log(Number("salah")); // NaN
+
+    // Menampilkan nilai maksimum yang bisa diwakili oleh tipe data Number
+    console.info(Number.MAX_VALUE); // 1.7976931348623157e+308
+
+    // Menampilkan nilai minimum yang bisa diwakili oleh tipe data Number (nilai positif terkecil)
+    console.info(Number.MIN_VALUE); // 5e-324
+
+    // Menampilkan nilai maksimum yang aman untuk operasi integer (bilangan bulat)
+    console.info(Number.MAX_SAFE_INTEGER); // 9007199254740991
+
+    // Menampilkan nilai minimum yang aman untuk operasi integer (bilangan bulat)
+    console.info(Number.MIN_SAFE_INTEGER); // -9007199254740991
+
+    // Menampilkan nilai NaN (Not a Number)
+    console.info(Number.NaN); // NaN
+
+    // Mengubah string "12345" menjadi Number dan menyimpan dalam variabel data
+    const data = Number("12345");
+
+    // Memeriksa apakah data adalah bilangan bulat (integer)
+    console.info(Number.isInteger(data)); // true
+
+    // Memeriksa apakah data adalah NaN (Not a Number)
+    console.info(Number.isNaN(data)); // false
+
+    // Mengubah string "12345" menjadi Number dan menyimpan dalam variabel nilai
+    const nilai = Number("12345");
+
+    // Mengubah nilai menjadi representasi biner (base 2) dalam bentuk string
+    console.info(nilai.toString(2)); // 11000000111001
+
+    // Menampilkan nilai dalam format lokal "id-ID" (Indonesia)
+    console.info(nilai.toLocaleString("id-ID")); // 12.345
+
+    // Menampilkan nilai dalam format lokal "en-US" (Amerika Serikat)
+    console.info(nilai.toLocaleString("en-US")); // 12,345
+</script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "namaAwal":"luffy",
+  "namaTengah":"D",
+  "namaAkhir":"monkey",
+  "address":{
+    "negara":"indonesia",
+    "kota":"bandung"
+  },
+  "hobby":[
+    "tidur",
+    "games"
+  ]
+}

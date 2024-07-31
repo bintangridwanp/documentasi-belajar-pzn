@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+</head>
+<body>
+<script>
+    {
+        // Membuat array bernama 'array'
+        const array = ["luffy", "D", "monkey"];
+
+        // Melakukan iterasi pada array dengan forEach dan menampilkan indeks serta nilai
+        array.forEach(function (nilai, index){
+            console.info(`${index} : ${nilai}`);
+        });
+
+        // Melakukan iterasi pada array dengan forEach menggunakan arrow function dan menampilkan nilai
+        array.forEach((nilai, index) =>  console.info(`${nilai}`));
+    }
+
+    {
+        // Membuat queue (antrian) kosong
+        const queue = [];
+
+        // Menambahkan elemen ke dalam queue
+        queue.push("roronoa");
+        queue.push("zoro");
+        queue.push("pemburu-baja-laut");
+
+        // Mengeluarkan elemen dari queue (FIFO: First In, First Out)
+        console.info(queue.shift()); // "roronoa"
+        console.info(queue.shift()); // "zoro"
+        console.info(queue.shift()); // "pemburu-baja-laut"
+        console.info(queue.shift()); // undefined (karena queue sudah kosong)
+    }
+
+    {
+        // Membuat stack (tumpukan) kosong
+        const stack = [];
+
+        // Menambahkan elemen ke dalam stack
+        stack.push("vinsmoke");
+        stack.push("sanji");
+        stack.push("kaki-hitam");
+
+        // Mengeluarkan elemen dari stack (LIFO: Last In, First Out)
+        console.info(stack.pop()); // "kaki-hitam"
+        console.info(stack.pop()); // "sanji"
+        console.info(stack.pop()); // "vinsmoke"
+        console.info(stack.pop()); // undefined (karena stack sudah kosong)
+    }
+
+    {
+        // Membuat array pencarian
+        const pencarian = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        // Mencari elemen pertama yang lebih besar dari 3
+        console.info(pencarian.find(nilai => nilai > 3)); // 4
+
+        // Mencari indeks elemen pertama yang lebih besar dari 3
+        console.info(pencarian.findIndex(nilai => nilai > 3)); // 3
+
+        // Memeriksa apakah nilai 7 ada dalam array
+        console.info(pencarian.includes(7)); // true
+
+        // Mencari indeks pertama dari nilai 5
+        console.info(pencarian.indexOf(5)); // 4
+
+        // Mencari indeks terakhir dari nilai 5
+        console.info(pencarian.lastIndexOf(5)); // 4
+    }
+
+    {
+        // Membuat array angka
+        const angka = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        // Menampilkan seluruh elemen dalam array
+        console.info(angka); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+        // Menyaring elemen yang ganjil
+        console.info(angka.filter(nilai => nilai % 2 === 1)); // [1, 3, 5, 7, 9]
+
+        // Menyaring elemen yang genap
+        console.info(angka.filter(nilai => nilai % 2 === 0)); // [2, 4, 6, 8, 10]
+    }
+
+    {
+        // Membuat array name
+        const name = ["luffy", "D", "monkey"];
+
+        // Mengubah setiap elemen menjadi huruf besar menggunakan map
+        const huruf_besar = name.map(nilai => nilai.toUpperCase());
+        console.info(huruf_besar); // ["LUFFY", "D", "MONKEY"]
+
+        // Menggabungkan elemen array menjadi satu string menggunakan reduce
+        const nameReduce = name.reduce((before, nilai) => before + " " + nilai);
+        console.info(nameReduce); // "luffy D monkey"
+
+        // Menggabungkan elemen array menjadi satu string dari kanan ke kiri menggunakan reduceRight
+        const nameRight = name.reduceRight((before, nilai) => before + " " + nilai);
+        console.info(nameRight); // "monkey D luffy"
+
+        // Membuat array angka
+        const angka = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        // Menjumlahkan seluruh elemen dalam array menggunakan reduce
+        const sum = angka.reduce((before, nilai) => before + nilai);
+        console.info(sum); // 55
+    }
+</script>
+</body>
+</html>

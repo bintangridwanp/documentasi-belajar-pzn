@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Date</title>
+</head>
+<body>
+<script>
+    {
+        // Membuat objek Date saat ini
+        const date_satu = new Date();
+        console.info(date_satu); // Menampilkan tanggal dan waktu saat ini
+
+        // Membuat objek Date dengan tahun, bulan, dan tanggal tertentu (30 Juli 2024)
+        const date_dua = new Date(2024, 6, 30);
+        console.info(date_dua); // Menampilkan 30 Juli 2024
+
+        // Membuat objek Date dengan tahun, bulan, tanggal, jam, menit, detik, dan milidetik tertentu (30 Juli 2024, 12:40:21)
+        const date_tiga = new Date(2024, 6, 30, 12, 40, 20, 1234);
+        console.info(date_tiga); // Menampilkan 30 Juli 2024, 12:40:21
+
+        // Membuat objek Date dari waktu dalam milidetik sejak 1 Januari 1970 (Epoch time)
+        const date_empat = new Date(1722357948424);
+        console.info(date_empat); // Menampilkan waktu yang sesuai dengan milidetik tersebut
+    }
+
+    {
+        // Mendapatkan waktu dalam milidetik sejak 1 Januari 1970 dari objek Date saat ini
+        const date_satu = new Date();
+        console.info(date_satu.getTime()); // Menampilkan waktu dalam milidetik
+
+        // Mendapatkan waktu dalam milidetik sejak 1 Januari 1970 dari objek Date tertentu (30 Juli 2024)
+        const date_dua = new Date(2024, 6, 30);
+        console.info(date_dua.getTime()); // Menampilkan waktu dalam milidetik
+
+        // Mendapatkan waktu dalam milidetik sejak 1 Januari 1970 dari objek Date tertentu (30 Juli 2024, 12:40:21)
+        const date_tiga = new Date(2024, 6, 30, 12, 40, 20, 1234);
+        console.info(date_tiga.getTime()); // Menampilkan waktu dalam milidetik
+
+        // Mendapatkan waktu dalam milidetik sejak 1 Januari 1970 dari objek Date tertentu berdasarkan milidetik yang diberikan
+        const date_empat = new Date(1722357948424);
+        console.info(date_empat.getTime()); // Menampilkan waktu dalam milidetik
+
+        // Mendapatkan waktu saat ini dalam milidetik sejak 1 Januari 1970
+        console.info(Date.now()); // Menampilkan waktu saat ini dalam milidetik
+    }
+
+    {
+        // Mem-parse string tanggal dan waktu menjadi waktu dalam milidetik
+        const time = Date.parse("2020-10-10T08:45:45.123+07:00");
+        console.info(time); // Menampilkan waktu dalam milidetik
+
+        // Membuat objek Date dari waktu dalam milidetik yang dihasilkan dari parsing
+        const date = new Date(time);
+        console.info(date); // Menampilkan objek Date yang sesuai dengan waktu tersebut
+    }
+
+    {
+        // Getter dan setter untuk objek Date
+
+        const date = new Date();
+
+        // Mendapatkan tahun dari objek Date
+        console.info(date.getFullYear()); // Menampilkan tahun saat ini
+
+        // Mendapatkan bulan dari objek Date (0-11)
+        console.info(date.getMonth()); // Menampilkan bulan saat ini (0 adalah Januari)
+
+        // Mendapatkan tanggal dari objek Date (1-31)
+        console.info(date.getDate()); // Menampilkan tanggal saat ini
+
+        // Mendapatkan jam dari objek Date (0-23)
+        console.info(date.getHours()); // Menampilkan jam saat ini
+
+        // Mendapatkan menit dari objek Date (0-59)
+        console.info(date.getMinutes()); // Menampilkan menit saat ini
+
+        // Mendapatkan detik dari objek Date (0-59)
+        console.info(date.getSeconds()); // Menampilkan detik saat ini
+
+        // Mendapatkan milidetik dari objek Date (0-999)
+        console.info(date.getMilliseconds()); // Menampilkan milidetik saat ini
+
+        // Mendapatkan offset zona waktu dalam menit dari UTC
+        console.info(date.getTimezoneOffset()); // Menampilkan offset zona waktu
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON</title>
+</head>
+<body>
+<script>
+    // Membuat objek JavaScript bernama 'orang'
+    const orang = {
+        namaAwal: "luffy",
+        namaTengah: "D",
+        namaAkhir: "monkey",
+        address: {
+            negara: "indonesia",
+            kota: "bandung"
+        },
+        hobby: ["tidur", "games"]
+    };
+
+    // Mengubah objek 'orang' menjadi string JSON
+    const json = JSON.stringify(orang);
+
+    // Menampilkan string JSON ke konsol
+    console.info(json); // {"namaAwal":"luffy","namaTengah":"D","namaAkhir":"monkey","address":{"negara":"indonesia","kota":"bandung"},"hobby":["tidur","games"]}
+
+    // Mengubah string JSON kembali menjadi objek JavaScript
+    const jsonObject = JSON.parse(json);
+
+    // Menampilkan objek yang dihasilkan dari parsing JSON ke konsol
+    console.log(jsonObject); // {namaAwal: "luffy", namaTengah: "D", namaAkhir: "monkey", address: {negara: "indonesia", kota: "bandung"}, hobby: ["tidur", "games"]}
+</script>
+</body>
+</html>

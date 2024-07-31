@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+</head>
+<body>
+<script>
+    {
+        // Membuat objek bernama 'onePiece'
+        const onePiece = {
+            satu: "luffy",
+            dua: "zoro",
+            tiga: "sanji",
+            empat: "nami"
+        };
+
+        // Membekukan objek 'onePiece' sehingga tidak bisa ditambah atau dihapus propertinya
+        // Object.freeze(onePiece);
+
+        // Menyegel objek 'onePiece' sehingga tidak bisa ditambah propertinya, tapi bisa diubah dan dihapus
+        Object.seal(onePiece);
+
+        // Mengubah nilai properti 'satu'
+        onePiece.satu = "diubah";
+
+        // Mencoba menambahkan properti baru 'lima' (tidak akan berhasil karena objek disegel)
+        onePiece.lima = "choper";
+
+        // Mencoba menghapus properti 'dua' (tidak akan berhasil karena objek disegel)
+        delete onePiece.dua;
+
+        // Menampilkan objek 'onePiece' setelah perubahan
+        console.info(onePiece); // { satu: 'diubah', dua: 'zoro', tiga: 'sanji', empat: 'nami' }
+    }
+
+    {
+        // Membuat objek bernama 'tujuan'
+        const tujuan = {
+            namaAwal: "luffy",
+            namaTengah: "D"
+        };
+
+        // Membuat objek bernama 'ambil'
+        const ambil = { namaAkhir: "monkey" };
+
+        // Menggabungkan properti dari 'ambil' ke dalam 'tujuan'
+        Object.assign(tujuan, ambil);
+
+        // Menampilkan objek 'tujuan' setelah penggabungan
+        console.info(tujuan); // { namaAwal: 'luffy', namaTengah: 'D', namaAkhir: 'monkey' }
+
+        // Menampilkan objek 'ambil' (tidak berubah)
+        console.info(ambil); // { namaAkhir: 'monkey' }
+    }
+
+    {
+        // Membuat objek bernama 'bajakLaut'
+        const bajakLaut = {
+            namaAwal: "luffy",
+            namaTengah: "D",
+            namaAkhir: "monkey"
+        };
+
+        // Menampilkan nilai-nilai dari properti objek 'bajakLaut'
+        console.info(Object.values(bajakLaut)); // ["luffy", "D", "monkey"]
+
+        // Menampilkan nama-nama properti dari objek 'bajakLaut'
+        console.info(Object.getOwnPropertyNames(bajakLaut)); // ["namaAwal", "namaTengah", "namaAkhir"]
+    }
+</script>
+</body>
+</html>

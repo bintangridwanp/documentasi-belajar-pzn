@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Big Integer</title>
+</head>
+<body>
+<script>
+    // Mendefinisikan dua bilangan besar (BigInt) 'a' dan 'b' menggunakan nilai maksimum aman untuk integer (Number.MAX_SAFE_INTEGER)
+    const a = BigInt(Number.MAX_SAFE_INTEGER);
+    const b = BigInt(Number.MAX_SAFE_INTEGER);
+
+    // Menjumlahkan dua bilangan besar (BigInt)
+    const sum = a + b;
+
+    // Menampilkan hasil penjumlahan ke konsol
+    console.info(sum); // 18014398509481982n
+
+    // Menampilkan tipe data dari hasil penjumlahan
+    console.info(typeof sum); // bigint
+</script>
+</body>
+</html>
