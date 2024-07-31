@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Ternary</title>
+</head>
+<body>
+<script>
+
+    const nilai = 70;
+
+    let ucapan;
+
+    if (nilai >= 75){
+        ucapan = "selamat anda lulus";
+    }else{
+        ucapan = "silahkan coba lagi";
+    }
+
+    document.writeln(`<p>${ucapan} </p>`)
+
+    // kondisi satu dengan kondisi kedua di pisahkan cukup dengan tanda : 
+    // ? untuk menghubungkan
+    ucapan = nilai >= 75 ? "selamat anda lulus" : "silahkan coba lagi";
+
+    document.writeln(`<p>${ucapan} </p>`)
+
+</script>    
+</body>
+</html>

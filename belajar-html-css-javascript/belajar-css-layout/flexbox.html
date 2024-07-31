@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox</title>
+    <style>
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .konten {
+            width: 200px;
+            border: 2px solid deeppink;
+            background-color: aqua;
+            margin: 10px;
+            padding: 20px;
+        }
+        .konten1 {
+            flex-basis: 300px;
+            flex-shrink: 0; /* mengontrol kemampuan sebuah item fleksibel untuk mengecil (shrinking) */
+        }
+
+    </style>
+</head>
+<body>
+
+<!--
+ *flexbox layout bertujuan untuk menyediakan cara yang lebih efisien untuk menatak letak ruang antar item,
+ dalam wadah (container),bahkan ukurannya tdk diketaui/dinamis dan sehingga menjadi flexsibel.
+ *flexbox layput paling sesuai untuk komponen skala kecil, utk komponen yang besar,
+ di rekomendasikan menggunakan grid layout
+*flex container, bisa menggunakan nilai flex, semua child element yg terdapat dlam flex container, di sebut flex item.
+-->
+
+<!--
+*kita bisa mengubah default item dari kiri ke kanan menjadi kanan ke kiri bawah atas dll, menggunakan flex-direction.
+row = kiri ke kanan
+row-reverse = kanan ke kiri
+colomn = atas ke bawah
+colomn-reverse = bawah ke atas
+-->
+
+<!--
+* flex-warp adalah pengaturan bagaimana item dalam kontainer flex (elemen dengan properti display: flex) akan mengalir ke baris atau kolom baru ketika ruang di kontainer tersebut terbatas.
+nowrap = item akan terus berada dalam satu baris
+wrap = ketika ukuran kontainer tidak mencukupi untuk menampung semua item secara horizontal.
+wrap-reverse = Ini mirip dengan nilai wrap, tetapi urutan pembungkusannya akan terbalik.
+
+-->
+
+    <div class="container">
+        <div class="konten konten1">
+            <h1>judul 1</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut harum iste nisi nulla praesentium quis ullam. Accusantium amet animi asperiores, beatae enim, eveniet excepturi illo omnis, quia quibusdam vel voluptates.</p>
+        </div>
+        <div class="konten">
+            <h1>judul 2</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut harum iste nisi nulla praesentium quis ullam. Accusantium amet animi asperiores, beatae enim, eveniet excepturi illo omnis, quia quibusdam vel voluptates.</p>
+        </div>
+        <div class="konten">
+            <h1>judul 3</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut harum iste nisi nulla praesentium quis ullam. Accusantium amet animi asperiores, beatae enim, eveniet excepturi illo omnis, quia quibusdam vel voluptates.</p>
+        </div>
+    </div>
+
+</body>
+</html>

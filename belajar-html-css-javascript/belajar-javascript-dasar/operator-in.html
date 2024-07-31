@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operator In</title>
+  </head>
+  <body>
+    <script>
+      //contoh in operator, digunakan untuk mengecek apakah sebuah property ada di dlm obejct
+      const person = {
+        firstName: "bintang",
+        middleName: "ridwan",
+        lastName: "pribadi",
+      };
+
+      if ("lastName" in person) {
+        alert(`hello ${person.lastName}`);
+      } else {
+        alert("hello");
+      }
+
+      // !! in operator hanya digunakan untuk mengecek property nya ada atau tidak,
+      // jika kita membuat null/undifined tetap dianggap true
+
+      const name = {
+        awal: "bintang",
+        tengah: undefined,
+        akhir: "pribadi",
+      };
+
+      if ("tengah" in name) {
+        alert(`Hello ${name.tengah}`);
+      } else if ("tengah" != undefined && null) {
+        alert(`Hello ${name.tengah}`);
+      } else {
+        alert("helo name");
+      }
+
+      const names = [null, "ridwan", undefined];
+      const result = [3] in names;
+      document.writeln(`<p>${result}</p>`);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>string template</title>
+  </head>
+  <body>
+    <script>
+      const name = "bintang ridwan pribadi";
+      const template = `name : ${name}`;
+
+      console.info(template);
+
+      const nilai = 100;
+      const template2 = `name : ${name}, lulus : ${nilai > 70}`;
+
+      console.info(template2);
+
+      const multiline = `bintang 
+      ridwan,
+      pribadi`;
+
+      document.writeln("<pre>");
+      document.writeln(multiline);
+      document.writeln("</pre>");
+    </script>
+  </body>
+</html>

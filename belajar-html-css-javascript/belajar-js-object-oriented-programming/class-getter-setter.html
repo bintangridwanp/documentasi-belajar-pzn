@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class : Getter dan Setter</title>
+</head>
+<body>
+<script>
+
+    class OnePiece {
+
+        constructor(luffy, zoro) {
+            this.luffy = luffy;
+            this.zoro = zoro;
+
+        }
+
+        get teman(){
+            return `${this.luffy} adalah teman ${this.zoro}`
+        }
+
+        set teman(nilai){
+            const hasil = nilai.split(" ");
+            this.luffy = hasil[0];
+            this.zoro = hasil[1];
+        }
+
+    }
+
+    const bajakLaut = new OnePiece("zoro", "luffy");
+    console.info(bajakLaut);
+    console.info(bajakLaut.teman);
+
+    bajakLaut.teman = ("nami", "robin")
+    console.info(bajakLaut)
+
+
+
+</script>
+</body>
+</html>

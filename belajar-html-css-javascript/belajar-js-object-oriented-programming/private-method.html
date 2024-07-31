@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Private Method</title>
+</head>
+<body>
+<script>
+
+    class Pengguna {
+
+        sapa(name){
+            if (name){
+                this.#sapaNama(name)
+            }else{
+                this.#sapaTanpaNama()
+            }
+        }
+
+        #sapaTanpaNama(){
+            console.log("Hello")
+        }
+
+        #sapaNama(name){
+            console.log(`Hallo ${name}`)
+        }
+
+
+    }
+
+    const luffy = new Pengguna()
+    luffy.sapa("zoro")
+
+</script>
+</body>
+</html>

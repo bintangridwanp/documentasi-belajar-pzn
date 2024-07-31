@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Parameter</title>
+</head>
+<body>
+<script>
+
+    //bisa membuat parameter lebih dari 1, di pisah menggunakan tanda koma.
+    //nama parameter tidak boleh sama!!
+    function sayHello(firstName, lastName){
+        document.writeln(`<p> Hello ${firstName} ${lastName}</p>`);
+    }
+
+    //contoh memanggil function parameter
+    sayHello("bintang", "ridwan");
+    sayHello()sayHello("bintang", "pribadi");
+    sayHello("bintang");
+    sayHello(undefined, "ridwan");
+</script>
+</body>
+</html>

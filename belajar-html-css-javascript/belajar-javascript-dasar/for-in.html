@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> For in </title>
+</head>
+<body>
+  <script>
+    const person = {
+        firstName : "bintang",
+        middleName : "ridwan",
+        lastName : "pribadi"
+    };
+
+    for (const property in person ) {
+        document.writeln(`<p> ${property} : ${person[property]} </p>`);
+    }
+
+    //contoh untuk array
+    const names = ["bintang", "ridwan", "pribadi"];
+
+    for (const index in names) {
+        document.writeln(`<p> ${index} : ${names[index]} </p>`);
+    }
+    // merupakan perulangan for yg digunakan utk mengiterasi seluruh data object / index array
+    //walaupun digunakan utk array tpi tdk di rekomendasikan utk array
+  </script>  
+</body>
+</html>

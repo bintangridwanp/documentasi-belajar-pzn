@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Arrow</title>
+</head>
+<body>
+<script>
+
+    //contoh penggunaan arrow function
+    // const sayHello = (name) => {
+    //    const say = `Hello ${name}`;
+    //    console.info(say);
+    // }
+
+//arrow function tanpa blok (arrow function sederhana)
+//const sayHello = (name) =>  console.info(`Hello ${name}`);
+const sayHello = name =>  console.info(`Hello ${name}`);
+
+//memanggil arrow function
+sayHello("Bintang");
+
+//arrow function mengembalikan value
+
+    const jumlah = (satu, dua) =>{
+        return satu + dua
+    }
+
+    console.info(jumlah(100, 100));
+
+//versi sederhana, jika parameter cuman 1, tidak perlu menggunakan ()
+    const sum = (first, second) => first + second;
+
+console.info(sum (100, 100));
+
+function giveName(kembali){
+    kembali("bintang")
+}
+
+// versi anonnymous function
+// giveName(function (name){
+//     console.info(`Hello ${name}`)
+//     })
+
+//versi arrow function
+    giveName(name => console.info(`Hello ${name}`))
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tipe data <object data="" type=""></object></title>
+</head>
+<body>
+    <script>
+        
+        const orang = { 
+            // contoh pembuatan tipe data obeject yang sederhana
+            // "" di gunakan jika nama menghubungkan kata
+            "nama lengkap" : "bintang ridwan pribadi",
+            alamat : "indonesia",
+            umur : 17
+        };
+    
+        // contoh pembuatan tipe data obejct 
+        // orang["nama"] = "bintang ridwan pribadi";
+        // orang["alamat"] = "indonesei";
+        // orang["umur"] = "17";
+
+        // cara memanggil object
+        console.info(` nama : ${orang["nama lengkap"]} `);
+
+        // tanda . digunakan utk menghubungkan nama const dgn object
+        console.info(` alamat : ${orang.alamat} `);
+        console.info(` umur : ${orang.umur} `);
+
+
+        console.table(orang);
+
+        delete orang["umur"];
+
+        
+        console.table(orang);
+        </script>
+</body>
+</html>

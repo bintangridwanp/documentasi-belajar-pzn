@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute</title>
+    <style>
+        /*attribute / element target bisa di ribah untuk menyeleksi tag*/
+        /* gunakan (spasi ~ ^|) untuk menggabungkan element*/
+        a[target="_blank"] {
+            color: red;
+        }
+
+        /* gunakan (spasi spasi, ~, |, ^, $, *) untuk menggabungkan element*/
+        p[title =belajar] {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <a href="" target="_blank">Contoh 1</a>
+    <a href="">Contoh 2</a>
+    <a href="" target="_self">Contoh 3</a>
+    <a href="">Contoh 4</a>
+
+    <p title="belajar">di pilih 1</p>  <!--(~ spasi)-->
+    <p title="belajarCSS">tidak di pilih</p>
+    <p title="belajar-CSS">di pilih 2</p>  <!--(|)-->
+    <p title="CSS belajar">di pilih 3</p> <!--(^)-->
+    <p title="CSS belajar">di pilih 4</p> <!--($)-->
+    <p title="belajar CSS">di pilih 5</p> <!--(^)-->
+    <span title="belajar CSS">di pilih, tanpa memperdulikan tag nya</span>
+
+</body>
+</html>

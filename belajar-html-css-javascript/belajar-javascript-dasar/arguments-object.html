@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arguments Object</title>
+</head>
+<body>
+    <script>
+
+        //di arguments kita bisa mengambil semua nilai dari yang kita masukan di parameter.
+        //arguments bisa digunakan menggunakan function
+        //direkomendasikan menggunakan rest parameter saja
+        function oldSum(){
+            let total = 0
+            for (const item of arguments) {
+                total += item;
+            }
+            document.writeln(`Total is ${total}`)
+        }
+
+        oldSum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+    </script>
+</body>
+</html>

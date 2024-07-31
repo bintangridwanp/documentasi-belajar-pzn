@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class Inheritance</title>
+</head>
+<body>
+<script>
+
+    class Raja {
+        OnePiece(name) {
+            console.log(`Halo saya adalah raja bajak laut ${name}`)
+        }
+    }
+
+    class Ratu extends Raja{
+
+        OnePiece(name) {
+            console.log(`Halo saya adalah ratu bajak laut ${name}`)
+        }
+    }
+
+    const luffy = new Raja();
+    console.info(luffy);
+    luffy.OnePiece("luffy");
+
+    const boaHancock = new Ratu();
+    console.info(boaHancock);
+    boaHancock.OnePiece("boa hancock")
+
+
+
+
+</script>
+</body>
+</html>

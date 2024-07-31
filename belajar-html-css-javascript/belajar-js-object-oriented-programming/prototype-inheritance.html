@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prototype Inheritance</title>
+</head>
+<body>
+<script>
+    // Mendefinisikan konstruktor Raja dengan parameter name
+    function Raja(name){
+        this.name = name; // Menetapkan properti name pada instance objek yang dibuat dengan konstruktor ini
+    }
+
+    // Mendefinisikan konstruktor Ratu dengan parameter name
+    function Ratu(name){
+        this.name = name; // Menetapkan properti name pada instance objek yang dibuat dengan konstruktor ini
+    }
+
+    // Menggunakan Object.create untuk membuat prototipe Raja mewarisi dari prototipe Ratu
+    Raja.prototype = Object.create(Ratu.prototype);
+
+    // Menambahkan metode sapaan ke prototipe Raja
+    Raja.prototype.sapaan = function (name){
+        console.log(`Halo saya ${name}, dan kamu Raja ${this.name}`);
+    };
+
+    // Menambahkan metode sapaan ke prototipe Ratu
+    Ratu.prototype.sapaan = function (name){
+        console.log(`Halo saya ${name}, dan kamu Ratu ${this.name}`);
+    };
+
+    // Membuat instance baru dari Raja dengan nama "toni"
+    const raja = new Raja("toni");
+    raja.sapaan("budi"); // Memanggil metode sapaan pada instance raja
+    // Output: Halo saya budi, dan kamu Raja toni
+
+    // Membuat instance baru dari Ratu dengan nama "bagas"
+    const ratu = new Ratu("bagas");
+    ratu.sapaan("budi"); // Memanggil metode sapaan pada instance ratu
+    // Output: Halo saya budi, dan kamu Ratu bagas
+
+    // Menampilkan informasi instance raja di konsol
+    console.info(raja);
+    // Output: Raja { name: 'toni' }
+
+    // Menampilkan informasi instance ratu di konsol
+    console.info(ratu);
+    // Output: Ratu { name: 'bagas' }
+</script>
+</body>
+</html>

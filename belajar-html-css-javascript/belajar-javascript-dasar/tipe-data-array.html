@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tipe data array</title>
+</head>
+<body>
+    <script>
+
+
+        // array bisa menggunakan tipe data apa saja
+        let arraykosong = [];
+        let arraynama = ["bintang", "ridwan", "pribadi"];
+
+        // push digunakan untuk menambkahkan array
+        const names = [];
+        names.push("bintang");
+        names.push("bintang", "ridwan");
+        names.push("bintang aja");
+
+        // contoh array bisa menampung semua tipe data
+        names.push("bintang", 123, Boolean);
+
+        // array di dalam array
+        names.push(["bintang"])
+
+        // membuat table array di console
+        console.table(names);
+
+        // memanggil array
+        console.info(names[0]);
+        console.info(names[1]);
+        console.info(names[2]);
+        console.info(names[3]);
+        console.info(names[4])
+
+        // mengganti nama array 
+        names[0] = "nama 1";
+        names[1] = "nama 2";
+        names[2] = "nama 3";
+        names[3] = "nama 4";
+        console.table(names);
+
+        // contoh untuk menghapus array
+        delete names[0];
+
+        console.table(names);
+        
+    </script>
+</body>
+</html>

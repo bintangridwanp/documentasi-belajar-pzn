@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+<body>
+<script>
+    //global scope bisa diakses di dalam local scope manapun
+    //local scope hanya bisa diakses didalam scope itu sendiri
+    //local scope satu tidak bisa mengakses antar local scope yang lainya.
+
+        //global scope
+    let counter = 0;
+
+    //function hitme & other berada di global scope
+    function hitme(){
+        //local scope hitme
+        counter++;
+    }
+
+    function other(){
+        //local scope other
+    }
+
+    hitme();
+    hitme();
+
+    console.info(counter);
+
+    function firts(){
+        //local function firts
+        let firtsVariabel = "firts";
+
+        function firtsNated(){
+            console.info(firtsVariabel);
+            const firtsNatedVariabel = "firts nasted";
+        }
+
+        firtsNated();
+
+        //console.info(firtsNatedVariabel); ERROR
+    }
+
+    function second(){
+        //local function second
+        let secondVariabel = "second";
+        //console.info(firtsVariabel); ERROR
+    }
+
+    firts();
+    second();
+
+    //console.info(firtsVariabel);  ERROR
+    //console.info(secondVariabel); ERROR
+
+</script>
+</body>
+</html>

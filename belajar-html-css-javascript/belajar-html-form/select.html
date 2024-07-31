@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select</title>
+  </head>
+<body>
+  <form action="">
+    <!-- Label untuk dropdown select -->
+    <label for="hobi"> Hobi : </label>
+
+    <!-- Dropdown select untuk memilih hobi -->
+    <select name="hobi" id="hobi">
+      <!-- Kelompok opsi dengan label 'coding' -->
+      <optgroup label="coding">
+        <option value="php">php</option>
+        <option value="java">java</option>
+        <option value="golang">golang</option>
+      </optgroup>
+
+      <!-- Kelompok opsi dengan label 'gaming' -->
+      <optgroup label="gaming">
+        <option value="pubg">pubg</option>
+        <option value="cod">cod</option>
+        <option value="coc">coc</option>
+      </optgroup>
+
+      <!-- Kelompok opsi dengan label 'sport' -->
+      <optgroup label="sport">
+        <option value="berenang">berenang</option>
+        <option value="lari">lari</option>
+        <option value="badminton">badminton</option>
+      </optgroup>
+    </select>
+
+    <!-- Tombol untuk mengirimkan formulir -->
+    <button type="submit">OK</button>
+  </form>
+</body>
+</html>

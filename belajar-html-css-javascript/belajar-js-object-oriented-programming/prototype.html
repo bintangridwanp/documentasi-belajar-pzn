@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prototype</title>
+</head>
+<body>
+<script>
+
+    function Makanan(makananSatu, makananDua){
+        this.makananSatu = makananSatu
+        this.makananDua = makananDua
+        this.makananEnak = function (namaMakanan){
+            console.log(`makanan paling murah itu ${namaMakanan} bukan ${this.makananSatu} apalagi ${makananDua}`)
+        }
+    }
+
+
+    //Menambahkan properti di prototype
+    Makanan.prototype.makananBiasaAja = function (){
+        console.info("ayam geprek")
+    }
+
+
+    const food = new Makanan("mie Ayam", "nasi padang")
+    food.makananKurangEnak =  function (){
+        console.info( "selamat makan")
+    }
+
+    food.makananBiasaAja = function (){
+        console.info("mie goreng")
+    }
+
+
+    const drinks = new Makanan("kopi", "susu")
+
+
+
+    console.log(food)
+    console.log(drinks)
+
+    food.makananBiasaAja()
+
+</script>
+</body>
+</html>

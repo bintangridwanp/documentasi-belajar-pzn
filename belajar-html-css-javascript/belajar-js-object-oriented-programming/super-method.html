@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Super Method</title>
+</head>
+<body>
+<script>
+
+    class One {
+
+        luffy(){
+            console.log("gomu gomu nooo")
+        }
+
+    }
+
+    class Two extends One {
+        luffy(){
+            super.luffy()
+            console.log("gimi gimi niii")
+        }
+
+    }
+
+    const zoro = new Two
+    zoro.luffy();
+
+</script>
+</body>
+</html>

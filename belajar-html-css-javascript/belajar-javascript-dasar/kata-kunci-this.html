@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kata Kunci This</title>
+</head>
+<body>
+<script>
+
+    console.info(this); //Window
+
+    // di function menjadi Window
+    function sample(){
+        console.info(this);
+        //di inner menjadi Window
+        function inner(){
+            console.info(this)
+        }
+        inner();
+    }
+
+    sample()
+
+    //tetapi jika digunakan di object method menjadi object pemilik function
+    const person = {
+        name: "Bintang",
+        sayHello: function (nilai){
+            console.info(`Hello ${nilai} My name is ${this.name}`)
+        }
+    };
+
+    person.sayHello("Eko")
+</script>
+</body>
+</html>

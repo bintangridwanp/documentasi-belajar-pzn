@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Static Method</title>
+</head>
+<body>
+<script>
+
+    class MathUthil {
+
+        static jumlah(...angka){
+            let total = 0;
+            for (const angkas of angka){
+                total = total + angkas
+            }
+            return total;
+        }
+
+    }
+
+    const kembalian = MathUthil.jumlah(1, 2, 3, 4, 5);
+    console.log(kembalian);
+
+</script>
+</body>
+</html>

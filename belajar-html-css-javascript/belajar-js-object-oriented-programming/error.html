@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Error</title>
+</head>
+<body>
+<script>
+
+    class MathUthil {
+        static jumlah(...angka){
+
+            if (angka.length == 0){
+                // const  error = new Error("tidak ada angka yang bisa di baca")
+                // throw error;
+
+                throw new Error("tidak ada angka yang bisa di baca")
+
+            }
+
+            let total = 0;
+            for (const angkas of angka){
+                total = total + angkas
+            }
+            return total;
+        }
+
+    }
+
+    console.info(MathUthil.jumlah())
+
+    console.info("luffy")
+
+    const kembalian = MathUthil.jumlah(1, 2, 3, 4, 5);
+    console.log(kembalian);
+
+</script>
+</body>
+</html>

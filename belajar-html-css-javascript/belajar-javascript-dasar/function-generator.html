@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Generator</title>
+</head>
+<body>
+<script>
+//generator adalah data yang bisa di iterasi seperti array
+//tanda *(bintang) digunakan untuk membuat data generator
+//yield digunakan untuk mengembalikan data iterasi
+//function generator tidak bisa diakses dengan menggunaka index (tidak seperti arrray)
+//function generator bersifat lazy,
+//jika data blum kita ambil dari generator, maka yield selanjutnya tdk akan diesekusi
+
+function* createName(){
+    yield "bintang"
+    yield "ridwan"
+    yield "pribadi"
+}
+
+const names = createName ();
+for (const name of names){
+    console.info(name);
+}
+
+function* bilanganGanjil(value){
+    for (let i = 1; i < value; i++){
+        if (i % 2 === 1 ){
+            console.info(`yield ${i}`)
+            yield i
+        }
+    }
+}
+
+//fuction menggunakan array
+function bilanganGanjilArray(value){
+    const result = []
+    for (let i = 1; i < value; i++){
+        if (i % 2 === 1 ){
+            console.info(`yield ${i}`)
+            result.push(i);
+        }
+    }
+    return result;
+}
+
+const angkaGanjil = bilanganGanjil(50);
+// for (const angka of angkaGanjil){
+//     console.info(angka)
+// }
+
+console.info(angkaGanjil.next().value);
+console.info(angkaGanjil.next().value);
+console.info(angkaGanjil.next().value);
+
+
+</script>
+</body>
+</html>

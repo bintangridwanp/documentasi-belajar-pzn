@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Combinator Selector</title>
+    <style>
+        /* gunakan spasi > + ~ */
+      div ~ p {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+
+    <p>nama nama bintang</p>
+    <div>
+        <h1>Nama Lengkap</h1>
+        <article>
+            <p>Bintang</p>
+        </article>
+        <p>Ridwan</p>
+        <p>Pribadi</p>
+    </div>
+    <p>Bintang Ridwan Pribadi</p>
+    <p>Bintang keren</p>
+
+1. Descendant Selector (element spasi element)
+   memilih element dari element yang di pilih.
+2. Child Selector (element > element)
+   memilih anak dari element yang di pilih.
+3. Adjacent Sibling Selector (element + element)
+   memilih element setelah element yang dipilih (sejajar dengan element nya).
+4. General Sibling Selector (element ~ element)
+   memilih seluruh element saudara dari element yang dipilih.
+
+  </body>
+</html>
+

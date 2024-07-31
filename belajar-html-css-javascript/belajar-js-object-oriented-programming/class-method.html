@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class Method</title>
+</head>
+<body>
+<script>
+
+    // Mendefinisikan class OnePiece
+    class OnePiece {
+
+        // Konstruktor yang menerima parameter name
+        constructor(name) {
+            this.character = name; // Menetapkan properti character dengan nilai dari parameter name
+        }
+
+        // Metode sapaan yang menerima parameter name
+        sapaan(name){
+            console.log(`Halo perkenalkan nama saya ${name}, saya akan menjadi raja bajak laut`);
+        }
+
+    }
+
+    // Membuat instance baru dari class OnePiece dengan nama "luffy"
+    const luffy = new OnePiece("luffy");
+    console.info(luffy); // Menampilkan informasi instance luffy di konsol
+    // Output: OnePiece { character: 'luffy' }
+
+    luffy.sapaan("luffy"); // Memanggil metode sapaan pada instance luffy
+    // Output: Halo perkenalkan nama saya luffy, saya akan menjadi raja bajak laut
+
+    // Membuat instance baru dari class OnePiece dengan nama "zoro"
+    const zoro = new OnePiece("zoro");
+    console.info(zoro.character); // Menampilkan properti character dari instance zoro di konsol
+    // Output: zoro
+
+</script>
+</body>
+</html>

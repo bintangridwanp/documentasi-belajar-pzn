@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operator Logika di Non Bolean</title>
+  </head>
+  <body>
+    <script>
+      //jika kedua nilai bernilai truty, maka yang di ambil nilai yang paling kiri
+      console.info("hello" || "");
+      console.info("" || []);
+      console.info("0" || "NOL");
+      console.info(0 || "NOL");
+      console.info(null || "NULL");
+      console.info("UNDEFINED" || undefined);
+      console.info(0 || false);
+
+      const name = {
+        firtsName: "bintang",
+        lastName: " pribadi",
+      };
+
+      const names = name.firtsName || name.lastName;
+      console.info(names);
+
+      //ini kebalikan dari turty.
+      // jika nilai keduanya sama falsy, yang diambil nilai yang paling kanan.
+      console.info("HELLO" && "");
+      console.info("" && []);
+      console.info("0" && "NULL");
+    </script>
+  </body>
+</html>

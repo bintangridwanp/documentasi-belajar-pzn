@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For of</title>
+</head>
+<body>
+<script>
+    //digunakan utk mengiterasi terhadap isi value dari iterable (array, string dll)
+    //tdk bisa digunakan utk data object, karena object bukan iterabel
+
+    const names = ["bintang", "ridwan", "pribadi"];
+    for(const name of names){
+        document.writeln(`<p> ${name} </p>`);
+    }
+
+    //contoh for of utk character
+    const fullName = "bintang ridwan pribadi"
+    for(const character of fullName){
+        document.writeln(`<p> ${character} </p>`);
+    }
+</script>
+</body>
+</html>

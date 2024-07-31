@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function Sebagai Value</title>
+</head>
+<body>
+    <script>
+
+      //contoh function sebagai variable
+      function sayHello(name){
+        document.writeln(`<p> Hello ${name}</p>`);
+      }
+
+      const say = sayHello;
+
+      //di saat memanggil bisa menggunakan nama varibel / nama function
+      say("Bintang");
+      sayHello("Ridwan");
+
+      //contoh function sebagai parameter
+
+      function giveName(kembali){
+        kembali("Pribadi"); // sayhello("Ridwan")
+      }
+
+      giveName(sayHello);
+      giveName(say); // giveName("sayHello")
+
+    </script>
+</body>
+</html>

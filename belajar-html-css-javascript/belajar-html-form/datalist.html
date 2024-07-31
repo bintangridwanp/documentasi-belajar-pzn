@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Datalist</title>
+  </head>
+<body>
+  <form action="">
+    <!-- Label untuk input teks makanan kesukaan -->
+    <label for="makanan"> Makanan kesukaan : </label>
+
+    <!-- Input teks yang menggunakan datalist untuk memberikan saran pilihan -->
+    <input type="text" name="makanan" id="makanan" list="makanann" />
+
+    <!-- Tombol untuk mengirimkan formulir -->
+    <button type="submit">OK</button>
+
+    <!-- Datalist yang berisi opsi makanan -->
+    <datalist id="makanann">
+      <option value="nasi_goreng">nasi_goreng</option>
+      <option value="mie_ayam">mie_ayam</option>
+      <option value="seblak">seblak</option>
+    </datalist>
+  </form>
+</body>
+</html>

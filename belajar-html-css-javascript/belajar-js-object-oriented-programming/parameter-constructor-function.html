@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parameter Constructoe Function</title>
+</head>
+<body>
+<script>
+
+    function Makanan(makananSatu, makananDua){
+        this.makananSatu = makananSatu
+        this.makananDua = makananDua
+        this.makananEnak = function (namaMakanan){
+            console.log(`makanan paling murah itu ${namaMakanan} bukan ${this.makananSatu} apalagi ${this.makananDua}`)
+        }
+    }
+
+    const food = new Makanan("mie Ayam", "nasi padang")
+    food.makananEnak("nasi goreng")
+    console.log(food)
+
+</script>
+</body>
+</html>

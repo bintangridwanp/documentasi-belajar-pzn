@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Undefined</title>
+  </head>
+  <body>
+    <script>
+      
+      //jikan variable tidak di kasih nilai, disebut undifined
+      let name;
+      if (name === undefined) {
+        console.info("UNDEFINED");
+      } else {
+        console.info("DEFINED");
+      }
+
+      //contoh penggunaan array undifined
+      const names = ["bintang", "ridwan"];
+      if (names[3] === undefined) {
+        console.info("ARRAY UNDIFINED");
+      } else {
+        console.info("ARRAY DIFINED");
+      }
+
+      const person = {};
+      if (person.name === undefined) {
+        console.log("UNDIFINED");
+      } else {
+        console.log("DIFINED");
+      }
+    </script>
+  </body>
+</html>

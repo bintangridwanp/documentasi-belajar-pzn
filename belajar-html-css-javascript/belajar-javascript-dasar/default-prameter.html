@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Default Parameter</title>
+</head>
+<body>
+    <script>
+        //kita bisa merubah nilai default dari paremeter yang belum di beri nilai.
+        // contoh pemberian/pengatian nilai default (UNKNOWN).
+        function regrister(name, gender = "UNKNOWN"){
+            console.log(name);
+            console.log(gender);
+        }
+
+        regrister("bintang", "laki laki");
+        regrister("budi");
+        regrister("joko", undefined);
+        regrister(undefined);
+
+        //null akan tetap dibaca null, dikarenakan null sudah ada nilai nya tpi kosong.
+        regrister("bintang", null);
+
+    </script>
+</body>
+</html>

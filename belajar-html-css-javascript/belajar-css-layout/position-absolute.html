@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- "positioning" mengacu pada cara kita mengatur posisi suatu elemen HTML di dalam halaman web. -->
+    <!-- position: absolute, itu membuat elemen tersebut dihapus dari aliran dokumen normal dan ditempatkan relatif terhadap elemen yang memiliki posisi non-static,
+         seperti elemen yang memiliki position: relative, atau jika tidak ada, maka akan berdasarkan elemen <body>. -->
+    <!-- z-index digunakan untuk mengatur tumpukan pada setiap element-->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        .content {
+            background-color: aqua;
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+        }
+        .content2 {
+            background-color: bisque;
+            position: absolute;
+            top: 220px;
+            left: 220px;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+<div class="content content1">
+    <h1>Content 1</h1>
+</div>
+<div class="content content2">
+    <h1>Content 2</h1>
+</div>
+<div class="content content3">
+    <h1>Content 3</h1>
+</div>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ea laborum, reprehenderit, tempora, laudantium quis ab officiis similique saepe impedit adipisci quae. Quis nisi delectus neque aut culpa accusantium velit!</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ea laborum, reprehenderit, tempora, laudantium quis ab officiis similique saepe impedit adipisci quae. Quis nisi delectus neque aut culpa accusantium velit!</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ea laborum, reprehenderit, tempora, laudantium quis ab officiis similique saepe impedit adipisci quae. Quis nisi delectus neque aut culpa accusantium velit!</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ea laborum, reprehenderit, tempora, laudantium quis ab officiis similique saepe impedit adipisci quae. Quis nisi delectus neque aut culpa accusantium velit!</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ea laborum, reprehenderit, tempora, laudantium quis ab officiis similique saepe impedit adipisci quae. Quis nisi delectus neque aut culpa accusantium velit!</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ea laborum, reprehenderit, tempora, laudantium quis ab officiis similique saepe impedit adipisci quae. Quis nisi delectus neque aut culpa accusantium velit!</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ea laborum, reprehenderit, tempora, laudantium quis ab officiis similique saepe impedit adipisci quae. Quis nisi delectus neque aut culpa accusantium velit!</p>
+</body>
+</html>

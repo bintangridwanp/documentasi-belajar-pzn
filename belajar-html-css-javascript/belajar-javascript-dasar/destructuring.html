@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Destructuring </title>
+</head>
+<body>
+<script>
+
+    {
+        //distructuring di array
+        const names = ["bintang", "ridwan", "pribadi", "prabowo", "ganjar",]
+        const [firtsName, middleName, lastName, ...others] = names;
+
+        console.info(firtsName);
+        console.info(middleName);
+        console.info(lastName);
+        console.info(others);
+    }
+
+    {
+        //distructuring di nasted obeject
+        const person = {
+            firtsName: "bintang",
+            lastName: "pribadi",
+            adrres: {
+                street: "jalan belum dibuat",
+                city: "gemolong",
+                country: "indonesia"
+            },
+            hobby: "tidur",
+            makanan: "rice frince"
+        };
+
+        let {firtsName, lastName, adrres: {street, city, country}, ...others} = person;
+        console.info(firtsName);
+        console.info(lastName);
+        //console.info(adrres);
+        console.info(others);
+        console.info(street);
+        console.info(city);
+        console.info(country);
+    }
+
+    {
+        //distucturing di parameter
+        function displayPerson({firtsName, middleName, lastName}){
+            console.info(firtsName);
+            console.info(middleName);
+            console.info(lastName);
+        }
+
+        const person = {
+            firtsName: "bintang",
+            middleName: "ridwan",
+            lastName: "pribadi"
+        }
+
+        displayPerson(person)
+
+    }
+
+    {
+        function sum([satu, dua]){
+            return satu + dua
+        }
+
+        console.info(sum([1,1]))
+        console.info(sum([10,10]))
+    }
+
+    {
+        //default value distructuring array
+        const names = ["bintang"];
+        const [firstName, middleName = "ridwan", lastName = "pribadi"] = names;
+
+
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+    }
+
+    {
+        //default value distructuring obeject
+        const person = {
+            firtsName: "prabowo",
+            lastName: "ganjar"
+        };
+
+        let {firtsName, middleName = "mas anies", lastName} = person;
+        console.info(firtsName);
+        console.info(middleName);
+        console.info(lastName);
+
+    }
+
+    {
+        //merubah nama varible di distructuring oject properti
+        const person = {
+            firtsName: "prabowo",
+            middleName: "mas anies",
+            lastName: "ganjar"
+        };
+
+        let {firtsName: namaDepan,
+            middleName: namaTengah,
+            lastName: namaBelakang} = person;
+
+        console.info(namaDepan);
+        console.info(namaTengah);
+        console.info(namaBelakang);
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object method</title>
+</head>
+<body>
+<script>
+//kita bisa memasukan sebuah function di properti dalam sebuah sebuah object.
+
+// const person = {
+//     name : "bintang",
+//     sayHello : function (name){
+//         alert(`Hello ${name}`);
+//     }
+// };
+
+const person = {
+    name : "Bintang"
+}
+
+person.sayHello = function (name) {
+    alert(`Hello ${name}`)
+}
+person.sayHello("bintang");
+</script>
+</body>
+</html>

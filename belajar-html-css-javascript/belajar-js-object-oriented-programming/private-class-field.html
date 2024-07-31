@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Private Class Private</title>
+</head>
+<body>
+<script>
+
+    class Angka {
+
+        #angka = 0;
+
+        menambah(){
+            this.#angka++;
+        }
+
+        mengurang(){
+            this.#angka--;
+        }
+
+        get(){
+            return this.#angka;
+        }
+
+    }
+
+    const luffy = new Angka();
+    luffy.menambah()
+    luffy.menambah()
+    luffy.menambah()
+    console.info(luffy.get())
+    console.info(luffy)
+
+
+</script>
+</body>
+</html>

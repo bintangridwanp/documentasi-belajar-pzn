@@ -1,0 +1,16 @@
+<html>
+<body>
+    <!-- Menampilkan judul tingkat 1 dengan teks "belajar picture" -->
+    <h1>belajar picture</h1>
+
+    <!-- Menggunakan elemen <picture> untuk menyajikan gambar responsif -->
+    <picture>
+        <!-- Menyediakan gambar alternatif untuk layar dengan lebar maksimal 300px -->
+        <source media="(max-width: 300px)" srcset="monyetsatu.jpg">
+        <!-- Menyediakan gambar alternatif untuk layar dengan lebar maksimal 500px -->
+        <source media="(max-width: 500px)" srcset="foden.jpg">
+        <!-- Gambar default jika tidak ada media query yang cocok -->
+        <img src="monyettiga.jpg" alt="monyet" style="width: 250px; height: 250px;">
+    </picture>
+</body>
+</html>

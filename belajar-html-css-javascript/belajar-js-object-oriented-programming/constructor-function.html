@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Constructor Function</title>
+</head>
+<body>
+<script>
+
+    function Orang(){
+        this.namaAwal = "";
+        this.namaTengah = "";
+        this.namaAkhir = "";
+    }
+
+    const bintang = new Orang();
+    bintang.namaAwal = "bintang";
+
+    const ridwan = new Orang();
+    ridwan.namaAwal = "bintang";
+    ridwan.namaTengah = "ridwan";
+
+    const pribadi = new Orang();
+    pribadi.namaAwal = "bintang";
+    pribadi.namaTengah = "ridwan";
+    pribadi.namaAkhir = "pribadi";
+
+    console.log(bintang);
+    console.log(ridwan);
+    console.log(pribadi);
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+</head>
+<body>
+<script>
+
+    // disaat pemberian nama pada constructor function, gunakan huruf kapital dihuruf pertama.
+    // semisal menggunakan dua kata gunakan huruf kapital di huruf pertama di kedua kata.
+
+    // Constructor Function Versi lama (class)
+    function Person(namaAwal, namaTengah){
+        this.namaAwal= namaAwal;
+        this.namaTengah = namaTengah;
+
+        //cara menambahkan method ke dlm constructor function
+        this.sayHallo = function (name){
+            console.log(`hallo ${name}, perkenalkan nama saya ${this.namaAwal}`)
+        }
+    }
+
+    // contoh menambahkan object pada class.
+    const bintang = new Person();
+
+    // memasukan properti lewat parameter
+    const ridwan = new Person("agus", "suprianto");
+
+    console.log(bintang);
+
+    // cara menambahkan properti di dlm constructor function
+    bintang.namaAwal = "bintang";
+    bintang.namaTengah = "ridwan";
+    bintang.sayHallo("joko");
+
+    console.log(ridwan);
+    ridwan.sayHallo("bambang");
+
+
+</script>
+</body>
+</html>

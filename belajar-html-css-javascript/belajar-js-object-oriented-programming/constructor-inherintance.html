@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Constructor Inheritance</title>
+</head>
+<body>
+<script>
+
+    // Mengcopy constructor lain ke constructor lainnya.
+
+    // Mendefinisikan konstruktor Raja dengan parameter namaAwal
+    function Raja(namaAwal){
+        this.namaAwal = namaAwal; // Menetapkan properti namaAwal pada instance objek yang dibuat dengan konstruktor ini
+        this.pesanRaja = function (nama){
+            console.log(`Halo saya adalah raja ${nama} dan kamu pasti ${namaAwal}`);
+        }
+    }
+
+    // Mendefinisikan konstruktor Ratu dengan parameter namaAwal dan namaAkhir
+    function Ratu(namaAwal, namaAkhir){
+        this.namaAkhir = namaAkhir; // Menetapkan properti namaAkhir pada instance objek yang dibuat dengan konstruktor ini
+        Raja.call(this, namaAwal); // Memanggil konstruktor Raja dalam konteks Ratu untuk mewariskan properti dan metode dari Raja
+    }
+
+    // Membuat instance baru dari Ratu dengan namaAwal "bintang" dan namaAkhir "ridwan"
+    const masyarakat = new Ratu("bintang", "ridwan");
+    console.info(masyarakat); // Menampilkan informasi instance masyarakat di konsol
+    // Output: Ratu { namaAkhir: 'ridwan', namaAwal: 'bintang', pesanRaja: [Function] }
+
+</script>
+</body>
+</html>

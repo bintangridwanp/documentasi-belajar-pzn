@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object Method Arrow Function</title>
+</head>
+<body>
+<script>
+
+    // !!! arrow function di object tdk bisa mengakses arguments object, function generator, this, dan super
+
+    const person = {
+        name: "Bintang",
+        sayHello: (name) => {
+           // console.info(this)
+            console.info(`Hello ${name}`) //My name is ${this.name}`);
+        }
+    };
+
+    person.sayHello("joko")
+
+</script>
+</body>
+</html>

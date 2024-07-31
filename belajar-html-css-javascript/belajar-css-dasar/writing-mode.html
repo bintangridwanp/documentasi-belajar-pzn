@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Writing Mode</title>
+    <style>
+      body {
+        padding: 0px;
+        margin: 0px;
+      }
+      div {
+        background-color: pink;
+        padding: 0px;
+        margin: 0px;
+      }
+      p {
+        padding: 0px;
+        margin: 0px;
+      }
+      .artikel1 {
+        height: 250px;
+        width: 200px;
+        padding: 10px;
+        margin: 10px;
+        writing-mode: vertical-rl;
+      }
+      .artikel2 {
+        height: 200px;
+        width: 300px;
+        padding: 20px;
+        margin: 20px;
+        background-color: yellow;
+        writing-mode: vertical-lr;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="artikel1">
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam
+        quasi impedit consectetur unde eaque totam, fugiat dolores suscipit,
+        corrupti perferendis officiis dolorem est aut beatae commodi voluptatum
+        atque accusamus magnam.
+      </p>
+    </div>
+    <div class="artikel2">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, laborum
+        vero dolore ullam quod praesentium illo quam a fugiat enim tenetur?
+        Commodi rem blanditiis eos tempore, reiciendis nostrum ducimus non?
+      </p>
+    </div>
+  </body>
+</html>

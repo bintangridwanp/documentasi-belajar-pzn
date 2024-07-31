@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Operator instaceof</title>
+</head>
+<body>
+<script>
+
+    class Kaido {
+
+    }
+
+    class Bigmom extends Kaido {
+
+    }
+
+    const luffy = new Kaido();
+    const zoro = new Bigmom();
+
+    console.info(typeof luffy);
+    console.info(typeof zoro);
+
+    console.info(luffy instanceof Kaido); //true
+    console.info(luffy instanceof Bigmom); //false
+
+    //commet true false berubah karena adanya inherintasce
+    console.info(zoro instanceof Kaido); //true
+    console.info(zoro instanceof Kaido); //false
+
+
+</script>
+</body>
+</html>

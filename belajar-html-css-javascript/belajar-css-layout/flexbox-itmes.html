@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex Items</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .konten {
+            width: 200px;
+            border: 2px solid deeppink;
+            background-color: aqua;
+            margin: 10px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- *komponen yg terdapat di dalam flex container disebut flex item (child lsng dari container) -->
+<div class="container">
+    <div class="konten" style="order: 3">
+        <h1>Judul 1</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at beatae dicta distinctio dolores enim esse eveniet illum impedit incidunt magni nemo numquam, perspiciatis possimus repellat rerum sit vitae voluptatem?</p>
+    </div>
+    <div class="konten" style="order: 1">
+        <h1>Judul 2</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at beatae dicta distinctio dolores enim esse eveniet illum impedit incidunt magni nemo numquam, perspiciatis possimus repellat rerum sit vitae voluptatem?</p>
+    </div>
+    <div class="konten" style="order: 2">
+        <h1>Judul 3</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at beatae dicta distinctio dolores enim esse eveniet illum impedit incidunt magni nemo numquam, perspiciatis possimus repellat rerum sit vitae voluptatem?</p>
+    </div>
+</div>
+</body>
+</html>
