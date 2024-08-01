@@ -1,0 +1,57 @@
+{
+  "openapi" : "3.1.0",
+  "info" : {
+    "title": "Todolist RESTful API",
+    "version": "0.1",
+    "description": "Belajar todolist restful API bersama pzn",
+    "termsOfService": "https://www.programmerzamannow.com",
+    "contact": {
+      "name": "luffy d monkey",
+      "email": "bintangridwanp@gmail.com",
+      "url": "https://www.programmerzamannow.com"
+    },
+    "license": {
+      "name": "APACHE 2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0"
+    }
+  },
+  "servers": [
+    {
+      "description": "Todolist RESTful API Server",
+      "url": "https://{environment}.programmerzamannow.com/api/v1",
+      "variables": {
+        "environment": {
+          "description": "Server Environment",
+          "default": "dev",
+          "enum": [
+            "dev",
+            "qa",
+            "prod"
+          ]
+        }
+      }
+    }
+  ],
+  "externalDocs": {
+    "description": "Youtube Programmer Zaman Now",
+    "url": "https://www.youtube.com/c/ProgrammerZamanNow"
+  },
+  "paths": {
+    "/todolist" : {
+      "get": {
+
+      },
+      "post": {
+
+      }
+    },
+      "/todolist/{todolistId}" : {
+        "put": {
+
+        },
+        "delete": {
+
+        }
+      }
+  }
+}
