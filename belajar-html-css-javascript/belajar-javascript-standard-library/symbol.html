@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Symbol</title>
+</head>
+<body>
+<script>
+    {
+        // Membuat dua simbol unik
+        const namaAwal = Symbol();
+        const namaAkhir = Symbol();
+
+        // Membuat objek untuk menyimpan nama
+        const namaOrang = {};
+        namaOrang[namaAwal] = "monkey"; // Menyimpan nilai dengan kunci simbol namaAwal
+        namaOrang[namaAkhir] = "luffy"; // Menyimpan nilai dengan kunci simbol namaAkhir
+
+        // Menampilkan objek namaOrang ke konsol
+        console.info(namaOrang); // Output: {Symbol(): "monkey", Symbol(): "luffy"}
+
+        // Menampilkan nilai yang disimpan dengan kunci simbol namaAwal ke konsol
+        console.info(namaOrang[namaAwal]); // Output: "monkey"
+
+        // Menampilkan nilai yang disimpan dengan kunci simbol namaAkhir ke konsol
+        console.log(namaOrang[namaAkhir]); // Output: "luffy"
+    }
+
+    {
+        // Membandingkan dua simbol yang dibuat menggunakan Symbol.for dengan kunci yang sama
+        console.info(Symbol.for("namaAwal") === Symbol.for("namaAwal")); // Output: true
+
+        // Membuat objek baru untuk menyimpan nama menggunakan simbol global
+        const nama0rang = {};
+        nama0rang[Symbol.for("namaAwal")] = "luffy"; // Menyimpan nilai dengan kunci simbol global "namaAwal"
+        nama0rang[Symbol.for("namaAkhir")] = "monkey"; // Menyimpan nilai dengan kunci simbol global "namaAkhir"
+
+        // Menampilkan objek nama0rang ke konsol
+        console.info(nama0rang); // Output: {Symbol(namaAwal): "luffy", Symbol(namaAkhir): "monkey"}
+
+        // Menampilkan nilai yang disimpan dengan kunci simbol global "namaAwal" ke konsol
+        console.info(nama0rang[Symbol.for("namaAwal")]); // Output: "luffy"
+
+        // Menampilkan nilai yang disimpan dengan kunci simbol global "namaAkhir" ke konsol
+        console.info(nama0rang[Symbol.for("namaAkhir")]); // Output: "monkey"
+    }
+</script>
+</body>
+</html>
