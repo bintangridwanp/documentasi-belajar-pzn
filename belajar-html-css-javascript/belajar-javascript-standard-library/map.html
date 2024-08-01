@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Map</title>
+</head>
+<body>
+<script>
+  // Membuat objek Map baru
+  const map = new Map();
+
+  // Menambahkan pasangan kunci dan nilai ke dalam map
+  map.set("name", "monkey D luffy");
+  map.set("address", "east blue");
+
+  // Menampilkan seluruh isi map ke konsol
+  console.info(map); // Output: Map { "name" => "monkey D luffy", "address" => "east blue" }
+
+  // Mendapatkan dan menampilkan nilai dari kunci "name"
+  console.info(map.get("name")); // Output: "monkey D luffy"
+
+  // Mendapatkan dan menampilkan nilai dari kunci "address"
+  console.info(map.get("address")); // Output: "east blue"
+
+  // Mencoba mendapatkan nilai dari kunci yang tidak ada dalam map
+  console.info(map.get("cita-cita")); // Output: undefined
+
+  // Menggunakan for...of loop untuk menampilkan setiap pasangan kunci dan nilai dalam map
+  for (const mapElement of map) {
+    console.info(mapElement); // Output: ["name", "monkey D luffy"], ["address", "east blue"]
+  }
+
+  // Menggunakan forEach untuk menampilkan setiap pasangan kunci dan nilai dalam map dengan format khusus
+  map.forEach((value, key) => console.info(`${key} : ${value}`));
+  // Output:
+  // "name : monkey D luffy"
+  // "address : east blue"
+
+</script>
+</body>
+</html>

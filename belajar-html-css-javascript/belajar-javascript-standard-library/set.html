@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Set</title>
+</head>
+<body>
+<script>
+    // Membuat objek Set baru
+    const onePiece = new Set();
+
+    // Menambahkan elemen-elemen ke dalam set
+    onePiece.add("monkey");
+    onePiece.add("D");
+    onePiece.add("D"); // "D" tidak akan ditambahkan dua kali karena Set hanya menyimpan nilai unik
+    onePiece.add("d");
+    onePiece.add("luffy");
+
+    // Menampilkan seluruh isi set ke konsol
+    console.info(onePiece); // Output: Set { "monkey", "D", "d", "luffy" }
+
+    // Menggunakan forEach untuk menampilkan setiap elemen dalam set
+    onePiece.forEach((value) => console.info(`${value}`));
+    // Output:
+    // "monkey"
+    // "D"
+    // "d"
+    // "luffy"
+
+</script>
+</body>
+</html>
