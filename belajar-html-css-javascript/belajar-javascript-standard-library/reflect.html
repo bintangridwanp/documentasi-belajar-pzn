@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reflect</title>
+</head>
+<body>
+<script>
+
+    const namaOrang = {};
+
+    Reflect.set(namaOrang,"namaAwal", "monkey");
+    Reflect.set(namaOrang,"namaTengah", "D");
+    Reflect.set(namaOrang,"namaAkhir", "luffy");
+
+    console.info(Reflect.get(namaOrang, "namaAwal"));
+    console.info(Reflect.get(namaOrang, "namaTengah"));
+    console.info(Reflect.get(namaOrang, "namaAkhir"));
+
+    console.info(Reflect.has(namaOrang, "namaAwal"));
+    console.info(Reflect.has(namaOrang, "namaTengah"));
+    console.info(Reflect.has(namaOrang, "namaAkhir"));
+
+</script>
+</body>
+</html>
