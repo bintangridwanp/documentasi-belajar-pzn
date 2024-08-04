@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Encode</title>
+</head>
+<body>
+<script>
+    {
+        // Encode dan decode URI
+
+        const url = "http://contoh.com/?name=Eko Kurniawan Khannedy";
+        console.info(url); // Menampilkan URL asli
+
+        // Meng-encode seluruh URI
+        const encoded = encodeURI(url);
+        console.info(encoded); // Menampilkan URI yang telah di-encode
+
+        // Mendecode URI yang telah di-encode
+        const decoded = decodeURI(encoded);
+        console.info(decoded); // Menampilkan URI yang telah didecode kembali ke bentuk aslinya
+    }
+
+    {
+        // Encode dan decode URI Component
+
+        const value = "Eko&Kurniawan=Khannedy";
+        const url = "http://contoh.com/?name=";
+        console.info(url + value); // Menampilkan URL lengkap dengan query parameter tanpa encoding
+
+        // Meng-encode komponen URI (hanya bagian value dari query parameter)
+        const encoded = encodeURIComponent(value);
+        console.info(url + encoded); // Menampilkan URL lengkap dengan komponen yang telah di-encode
+
+        // Mendecode komponen URI yang telah di-encode
+        const decoded = decodeURIComponent(encoded);
+        console.info(url + decoded); // Menampilkan URL lengkap dengan komponen yang telah didecode kembali ke bentuk aslinya
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Proxy</title>
+</head>
+<body>
+<script>
+    // Membuat objek target dengan properti middleName
+    const target = {
+        middleName: "D"
+    };
+
+    // Membuat handler untuk proxy dengan fungsi get dan set
+    const handler = {
+        // Fungsi get yang akan dipanggil saat properti diakses
+        get: function (target, property) {
+            console.info(`Access property : ${property}`);
+            return target[property];
+        },
+        // Fungsi set yang akan dipanggil saat properti diubah
+        set: function (target, property, value) {
+            console.info(`Change property ${property} : ${value}`);
+            if (value == null) {
+                // Jika nilai yang diatur adalah null, ganti dengan string kosong
+                target[property] = "";
+            } else {
+                target[property] = value;
+            }
+        }
+    };
+
+    // Membuat proxy untuk objek target dengan handler yang telah didefinisikan
+    const proxy = new Proxy(target, handler);
+
+    // Mengatur nilai properti firstName pada proxy
+    proxy.firstName = "monkey"; // Output di konsol: Change property firstName : monkey
+
+    // Mengatur nilai properti lastName pada proxy dengan nilai null
+    proxy.lastName = null; // Output di konsol: Change property lastName : null
+
+    // Mengakses nilai properti firstName pada proxy
+    console.info(proxy.firstName); // Output di konsol: Access property : firstName -> "monkey"
+
+    // Mengakses nilai properti middleName pada proxy
+    console.info(proxy.middleName); // Output di konsol: Access property : middleName -> "D"
+
+    // Mengakses nilai properti lastName pada proxy
+    console.info(proxy.lastName); // Output di konsol: Access property : lastName -> ""
+
+    // Menampilkan objek target ke konsol
+    console.info(target); // Output: { middleName: "D", firstName: "monkey", lastName: "" }
+</script>
+</body>
+</html>

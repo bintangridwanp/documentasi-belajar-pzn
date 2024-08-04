@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reg Exp</title>
+</head>
+<body>
+<script>
+  {
+    // Membuat regex dengan tiga cara berbeda
+    const regex1 = /luffy/; // Menggunakan literal regex
+    const regex2 = new RegExp("luffy"); // Menggunakan constructor RegExp dengan string
+    const regex3 = new RegExp(/luffy/); // Menggunakan constructor RegExp dengan regex literal
+  }
+
+  {
+    // Menguji regex
+
+    const name = "monkey D luffy";
+    const regex = /luffy/;
+
+    // Menggunakan exec untuk mengeksekusi regex dan mendapatkan hasilnya
+    const result = regex.exec(name);
+    console.info(result); // Output: ["luffy", index: 10, input: "monkey D luffy", groups: undefined]
+    console.info(regex.exec("tidak ada")); // Output: null (karena "tidak ada" tidak mengandung "luffy")
+
+    // Menggunakan test untuk memeriksa apakah regex cocok dengan string
+    const test = regex.test(name);
+    console.info(test); // Output: true
+    console.info(regex.test("tidak ada")); // Output: false
+  }
+
+  {
+    // Menggunakan modifier regex
+
+    const name = "luffy D monkey";
+    const regex1 = /^D/igm; // Modifier i untuk case-insensitive, g untuk global, m untuk multiline
+    const regex2 = /monkey/ig; // Modifier i untuk case-insensitive, g untuk global
+
+    let result;
+    // Menggunakan exec dalam loop untuk mendapatkan semua kecocokan dengan regex1
+    while ((result = regex1.exec(name)) !== null) {
+      console.info(result); // Tidak ada output karena tidak ada yang cocok dengan "^D" di awal string
+    }
+
+    // Menggunakan exec dalam loop untuk mendapatkan semua kecocokan dengan regex2
+    while ((result = regex2.exec(name)) !== null) {
+      console.info(result); // Output: ["monkey", index: 8, input: "luffy D monkey", groups: undefined]
+    }
+  }
+
+  {
+    // Menggunakan regex lanjutan
+
+    const regex = /ek[ioaeu]/ig; // Regex untuk mencocokkan "ek" diikuti oleh salah satu dari [i, o, a, e, u]
+
+    const name = "eko eki eka eku eke edo eko eki";
+    let result;
+    // Menggunakan exec dalam loop untuk mendapatkan semua kecocokan
+    while ((result = regex.exec(name)) !== null) {
+      console.info(result); // Output: ["eko", ...], ["eki", ...], ["eka", ...], ["eku", ...], ["eke", ...], ["eko", ...], ["eki", ...]
+    }
+  }
+
+  {
+    const name = "edo eko eki eka eku eke edo eko eki";
+
+    // Menggunakan match untuk mendapatkan semua kecocokan
+    console.info(name.match(/ek[aiueo]/ig)); // Output: ["eko", "eki", "eka", "eku", "eke", "eko", "eki"]
+
+    // Menggunakan search untuk mendapatkan indeks pertama kecocokan
+    console.info(name.search(/ek[aiueo]/ig)); // Output: 4
+
+    // Menggunakan replace untuk mengganti kecocokan pertama dengan string baru
+    console.info(name.replace(/ek[aiueo]/i, "kamu")); // Output: "edo kamu eki eka eku eke edo eko eki"
+
+    // Menggunakan replaceAll untuk mengganti semua kecocokan dengan string baru
+    console.info(name.replaceAll(/ek[aiueo]/ig, "kamu")); // Output: "edo kamu kamu kamu kamu kamu edo kamu kamu"
+
+    // Menggunakan split untuk memisahkan string berdasarkan regex
+    console.info(name.split(/e/ig));
+    // Output: ["", "do ", "ko ", "ki ", "ka ", "ku ", "k", " ", "do ", "ko ", "ki"]
+  }
+
+</script>
+</body>
+</html>
