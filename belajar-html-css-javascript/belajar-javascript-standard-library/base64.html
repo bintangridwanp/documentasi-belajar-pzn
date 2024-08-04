@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Base 64</title>
+</head>
+<body>
+<script>
+    // Mendeklarasikan string yang akan di-encode dan decode
+    const name = "luffy&D=monkey";
+    console.info(name);
+
+    // Meng-encode string ke Base64
+    const encoded = btoa(name);
+    console.log(encoded); // Output: "bHVmZnkgRCBtb25rZXk="
+
+    // Mendecode string dari Base64
+    const decoded = atob(encoded);
+    console.info(decoded); // Output: "luffy D monkey"
+
+</script>
+</body>
+</html>
