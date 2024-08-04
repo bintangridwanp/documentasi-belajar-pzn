@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>With Module</title>
+    <!-- Memuat file modul eksternal "sapa.js" -->
+    <script type="module" src="scripts/sapa.js"></script>
+</head>
+<body>
+<script type="module">
+    // Mengimpor fungsi goodMorning dan goodNight dari file modul "sapa.js"
+    import {goodMorning, goodNight} from "./scripts/sapa.js";
+
+    // Memanggil fungsi goodNight dengan argumen "luffy"
+    goodNight("luffy"); // Output di konsol tergantung pada implementasi fungsi goodNight
+
+    // Memanggil fungsi goodMorning dengan argumen "zoro"
+    goodMorning("zoro"); // Output di konsol tergantung pada implementasi fungsi goodMorning
+
+    // Mengakses variabel name yang belum dideklarasikan, akan menyebabkan ReferenceError
+    console.log(name); // Output: ReferenceError: name is not defined
+</script>
+</body>
+</html>

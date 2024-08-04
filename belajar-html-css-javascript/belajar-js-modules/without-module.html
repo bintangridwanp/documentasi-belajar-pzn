@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
-    <meta charset="UTF-8">
-    <title>Withhout Module</title>\
-    <script src="scripts/library.js"></script>
+  <meta charset="UTF-8">
+  <title>Without Module</title>
+  <!-- Memuat file skrip eksternal "library.js" -->
+  <script src="scripts/library.js"></script>
 </head>
 <body>
 <script>
+  // Memanggil fungsi goodNight dengan argumen "luffy"
+  goodNight("luffy"); // Output di konsol tergantung pada implementasi fungsi goodNight
 
-  goodNight("luffy");
+  // Memanggil fungsi goodMorning dengan argumen "zoro"
+  goodMorning("zoro"); // Output di konsol tergantung pada implementasi fungsi goodMorning
 
-  goodMorning("zoro");
-
-  console.log(name)
-
-
+  // Mengakses variabel name yang belum dideklarasikan, akan menyebabkan ReferenceError
+  console.log(name); // Output: ReferenceError: name is not defined
 </script>
 </body>
 </html>

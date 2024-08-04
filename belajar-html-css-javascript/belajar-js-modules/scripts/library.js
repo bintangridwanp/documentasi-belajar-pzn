@@ -1,9 +1,12 @@
-function goodNight (name){
-    console.info(`hallo ${name}, selemat malam`);
+// Mendefinisikan fungsi goodNight yang menerima argumen name dan menampilkan pesan di konsol
+function goodNight(name) {
+    console.info(`hallo ${name}, selamat malam`);
 }
 
-function goodMorning (name){
-    console.info(`hallo ${name}, selemat pagi`);
+// Mendefinisikan fungsi goodMorning yang menerima argumen name dan menampilkan pesan di konsol
+function goodMorning(name) {
+    console.info(`hallo ${name}, selamat pagi`);
 }
 
-const name = ("luffy")
+// Mendeklarasikan konstanta name dengan nilai "luffy"
+const name = "luffy";
