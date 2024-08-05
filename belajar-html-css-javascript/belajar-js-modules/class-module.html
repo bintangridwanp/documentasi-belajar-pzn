@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class Module</title>
+</head>
+<body>
+<script type="module">
+    // Mengimpor kelas Orang dari file class.js
+    import { Orang } from "./scripts/class.js";
+
+    // Membuat instance baru dari kelas Orang dengan nama "luffy"
+    const orang = new Orang("luffy");
+
+    // Memanggil metode sapaHalo pada instance orang dengan argumen "chopper"
+    orang.sapaHalo("chopper");
+</script>
+</body>
+</html>

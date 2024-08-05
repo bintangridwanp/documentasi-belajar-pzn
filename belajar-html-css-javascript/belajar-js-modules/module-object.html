@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module Object</title>
+</head>
+<body>
+<script type="module">
+
+    import * as luffy from "./scripts/module-object.js";
+
+    console.info(luffy.firstName);
+    console.info(luffy.middleName);
+    console.info(luffy.lastName);
+
+    luffy.hello();
+
+    const person = new luffy.Person();
+
+</script>
+</body>
+</html>
