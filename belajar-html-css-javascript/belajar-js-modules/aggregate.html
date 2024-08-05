@@ -6,17 +6,21 @@
 </head>
 <body>
 <script type="module">
+    // Mengimpor beberapa ekspor dari file aggregate.js
+    import { Orang, goodMorning, goodNight, jumlah } from "./scripts/aggregate.js";
 
-    import {Person, sayGoodBye, sayHello, sum} from "./scripts/aggregate.js";
+    // Membuat instance baru dari kelas Orang
+    const orang = new Orang("Eko");
+    // Memanggil metode sapaHalo pada instance orang
+    orang.sapaHalo("Joko");
 
-    const person = new Person("Eko");
-    person.sayHello("Joko");
+    // Memanggil fungsi goodMorning
+    goodMorning("Eko");
+    // Memanggil fungsi goodNight
+    goodNight("Eko");
 
-    sayGoodBye("Eko");
-    sayHello("Eko");
-
-    console.info(sum(10, 10));
-
+    // Menampilkan hasil fungsi jumlah di konsol
+    console.info(jumlah(10, 10));
 </script>
 </body>
 </html>

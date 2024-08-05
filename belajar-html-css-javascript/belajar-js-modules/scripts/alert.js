@@ -1,3 +1,4 @@
-export function alertHello(name){
-    alert(`Hello ${name}`);
+// Mendefinisikan dan mengekspor fungsi alertHallo
+export function alertHallo(name) {
+    alert(`Hallo ${name}`);
 }

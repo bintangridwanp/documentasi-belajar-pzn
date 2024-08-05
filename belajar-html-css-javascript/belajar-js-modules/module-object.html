@@ -6,17 +6,19 @@
 </head>
 <body>
 <script type="module">
-
+    // Mengimpor semua ekspor dari module-object.js sebagai objek bernama luffy
     import * as luffy from "./scripts/module-object.js";
 
-    console.info(luffy.firstName);
-    console.info(luffy.middleName);
-    console.info(luffy.lastName);
+    // Menampilkan properti namaAwal, namaTengah, dan namaAkhir dari objek luffy di konsol
+    console.info(luffy.namaAwal);
+    console.info(luffy.namaTengah);
+    console.info(luffy.namaAkhir);
 
+    // Memanggil fungsi hello dari objek luffy
     luffy.hello();
 
+    // Membuat instance baru dari kelas Person yang diimpor melalui objek luffy
     const person = new luffy.Person();
-
 </script>
 </body>
 </html>

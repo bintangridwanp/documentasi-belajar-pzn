@@ -5,20 +5,25 @@
     <title>Dynamic Module Loading</title>
 </head>
 <body>
-<input type="text" id="name">
+<!-- Input untuk memasukkan nama -->
+<input type="text" id="name" placeholder="Enter your name">
+<!-- Tombol untuk memanggil fungsi yang mengimpor modul -->
 <input type="button" value="Say" id="sayButton">
-<script type="module">
 
-    document.getElementById("sayButton").onclick = function (){
+<script type="module">
+    // Menambahkan event listener untuk tombol sayButton
+    document.getElementById("sayButton").onclick = function () {
+        // Mendapatkan nilai dari input dengan id name
         const name = document.getElementById("name").value;
 
+        // Mengimpor modul alert.js secara dinamis
         import("./scripts/alert.js").then(function (module) {
-            module.alertHello(name);
-        })
-
+            // Memanggil fungsi alertHallo dari modul yang diimpor
+            module.alertHallo(name);
+        }).catch(function (error) {
+            console.error("Error loading module:", error);
+        });
     }
-
-
 </script>
 </body>
 </html>
