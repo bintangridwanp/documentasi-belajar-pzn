@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Element Create</title>
+</head>
+<body>
+
+<div id="konten" class="konten">
+
+
+
+</div>
+
+<script>
+
+  const konten = document.getElementById("konten")
+
+  const judul =  document.createElement("h1");
+  judul.textContent = "belajar js DOM"
+  konten.appendChild(judul);
+
+  const diskripsi = document.createElement("p");
+  diskripsi.textContent = "belajar js dom bersama programmer zaman now"
+  konten.appendChild(diskripsi)
+
+</script>
+</body>
+</html>

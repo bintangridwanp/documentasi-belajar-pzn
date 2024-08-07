@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Node Method</title>
+</head>
+<body>
+<ul id="menu">
+
+  <li id="pertama"> Pertama </li>
+  <li id="kedua"> Kedua </li>
+  <li id="ketiga"> Ketiga </li>
+
+</ul>
+
+<script>
+  // Mengambil elemen dengan id "menu" dan menyimpannya dalam variabel 'menu'
+  const menu = document.getElementById("menu");
+
+  // Menghapus elemen dengan id "pertama" dari elemen 'menu'
+  menu.removeChild(document.getElementById("pertama"));
+
+  // Menghapus elemen dengan id "kedua" dari elemen 'menu'
+  menu.removeChild(document.getElementById("kedua"));
+
+  // Menghapus elemen dengan id "ketiga" dari elemen 'menu'
+  menu.removeChild(document.getElementById("ketiga"));
+</script>
+</body>
+</html>

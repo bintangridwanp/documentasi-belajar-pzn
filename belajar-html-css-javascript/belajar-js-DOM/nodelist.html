@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node List</title>
+</head>
+<body>
+
+<ul id="menu-satu">
+    <li id="satu">pertama</li>
+    <li id="dua">kedua</li>
+    <li id="tiga">ketiga</li>
+</ul>
+
+<ul id="menu-dua">
+    <li>pertama</li>
+    <li>kedua</li>
+    <li>ketiga</li>
+</ul>
+
+
+<script>
+
+    const list = document.querySelectorAll("li");
+    console.info(list);
+
+    const menu_satu = document.getElementById("menu-satu").childNodes;
+    console.info(menu_satu);
+
+    const menu_dua = document.getElementById("menu-dua").childNodes;
+    console.info(menu_dua);
+
+</script>
+</body>
+</html>

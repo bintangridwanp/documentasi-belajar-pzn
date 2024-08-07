@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node Property</title>
+</head>
+<body>
+<ul id="menu">
+    <li id="pertama"> Pertama </li>
+    <li id="kedua"> Kedua </li>
+    <li id="ketiga"> Ketiga </li>
+</ul>
+
+<script>
+    // Mengambil elemen dengan id "menu" dan menyimpannya dalam variabel 'menu'
+    const menu = document.getElementById("menu");
+
+    // Menampilkan elemen yang diambil (dengan id "menu") di console
+    console.info(menu);
+
+    // Menampilkan semua node anak dari elemen 'menu' di console
+    console.info(menu.childNodes);
+
+    // Mengambil elemen dengan id "ketiga" dan menyimpannya dalam variabel 'ketiga'
+    const ketiga = document.getElementById("ketiga");
+
+    // Menampilkan elemen yang diambil (dengan id "ketiga") di console
+    console.log(ketiga);
+
+    // Menampilkan teks konten dari elemen 'ketiga' di console
+    console.log(ketiga.textContent);
+
+    // Menampilkan elemen sibling sebelumnya dari 'ketiga' di console
+    console.log(ketiga.previousSibling.previousSibling);
+
+    // Menampilkan elemen sibling berikutnya dari 'ketiga' di console
+    console.log(ketiga.nextSibling.nextSibling);
+</script>
+</body>
+</html>

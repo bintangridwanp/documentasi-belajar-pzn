@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node List Live</title>
+</head>
+<body>
+
+<ul id="menu-satu">
+    <li id="satu">pertama</li>
+    <li id="dua">kedua</li>
+    <li id="tiga">ketiga</li>
+</ul>
+
+<ul id="menu-dua">
+    <li>pertama</li>
+    <li>kedua</li>
+    <li>ketiga</li>
+</ul>
+
+<script>
+    // Mengambil semua elemen <li> dalam dokumen dan menyimpannya dalam variabel 'list'
+    const list = document.querySelectorAll("li");
+
+    // Mengambil elemen dengan id "menu-satu" dan menyimpannya dalam variabel 'menu_satu'
+    const menu_satu = document.getElementById("menu-satu");
+
+    // Menambahkan elemen <li> baru sebagai anak dari 'menu_satu'
+    menu_satu.appendChild(document.createElement("li"));
+
+    // Menambahkan elemen <li> baru sebagai anak dari 'menu_satu'
+    menu_satu.appendChild(document.createElement("li"));
+
+    // Menampilkan NodeList dari elemen <li> yang diambil sebelumnya di console
+    console.info(list);
+</script>
+</body>
+</html>
