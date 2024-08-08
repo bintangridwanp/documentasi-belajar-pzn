@@ -18,18 +18,24 @@
     <li>ketiga</li>
 </ul>
 
-
 <script>
-
+    // Mengambil semua elemen <li> dalam dokumen dan menyimpannya dalam variabel 'list'
     const list = document.querySelectorAll("li");
+
+    // Menampilkan NodeList dari semua elemen <li> di console
     console.info(list);
 
+    // Mengambil NodeList hidup dari semua node anak dari elemen dengan id "menu-satu"
     const menu_satu = document.getElementById("menu-satu").childNodes;
+
+    // Menampilkan NodeList hidup dari node anak 'menu-satu' di console
     console.info(menu_satu);
 
+    // Mengambil NodeList hidup dari semua node anak dari elemen dengan id "menu-dua"
     const menu_dua = document.getElementById("menu-dua").childNodes;
-    console.info(menu_dua);
 
+    // Menampilkan NodeList hidup dari node anak 'menu-dua' di console
+    console.info(menu_dua);
 </script>
 </body>
 </html>

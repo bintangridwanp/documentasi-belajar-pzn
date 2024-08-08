@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attribute</title>
+</head>
+<body>
+<img id="logo" src="https://www.programmerzamannow.com/img/pzn.png" alt="PZN Logo">
+
+<script>
+    // Mengambil elemen dengan id "logo" dan menyimpannya dalam variabel 'logo'
+    const logo = document.getElementById("logo");
+
+    // Mengambil nilai atribut "src" dari elemen 'logo' menggunakan getAttribute
+    const src = logo.getAttribute("src");
+    console.info(src); // Menampilkan nilai atribut "src" di console
+
+    // Baris berikut digunakan jika ingin mengambil node atribut dan menampilkan nama serta nilainya.
+    // const src = logo.getAttributeNode("src");
+    // console.info(src.name);  // Menampilkan nama atribut (misalnya "src")
+    // console.info(src.value); // Menampilkan nilai atribut (misalnya URL gambar)
+</script>
+
+</body>
+</html>

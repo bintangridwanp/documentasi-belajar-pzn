@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Named Node Map</title>
+</head>
+<body>
+<img id="logo" src="https://www.programmerzamannow.com/img/pzn.png" alt="PZN Logo">
+
+<script>
+    // Mengambil elemen dengan id "logo" dan menyimpannya dalam variabel 'logo'
+    const logo = document.getElementById("logo");
+
+    // Mengambil NamedNodeMap yang berisi semua atribut dari elemen 'logo'
+    const attributes = logo.attributes;
+
+    // Menggunakan loop untuk iterasi melalui setiap atribut dalam NamedNodeMap
+    for (let attribute of attributes) {
+        // Menampilkan nama dan nilai dari setiap atribut di console
+        console.info(`${attribute.name} : ${attribute.value}`);
+    }
+</script>
+
+</body>
+</html>
