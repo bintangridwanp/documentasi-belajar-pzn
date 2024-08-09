@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Form Element</title>
+</head>
+<body>
+<!-- Formulir dengan nama "commentForm" -->
+<form name="commentForm">
+    <!-- Input untuk komentar dengan id "comment" -->
+    <label for="comment">
+        Comment : <input type="text" name="comment" id="comment">
+    </label>
+    <br>
+    <!-- Input untuk nama pengirim dengan id "from" -->
+    <label for="from">
+        From : <input type="text" name="from" id="from">
+    </label>
+    <br>
+    <!-- Tombol submit untuk mengirimkan formulir -->
+    <input type="submit" value="Submit">
+</form>
+
+<!-- Div untuk menampilkan daftar komentar -->
+<div id="commentList"></div>
+
+<script>
+    // Mengambil formulir dengan nama "commentForm" dan menetapkan event handler untuk submit
+    document.querySelector("form[name=commentForm]").onsubmit = function (event){
+
+        // Mencegah pengiriman form secara default
+        event.preventDefault();
+
+        // Mengambil elemen <div> untuk menampilkan daftar komentar
+        const commentList = document.getElementById("commentList");
+
+        // Mengambil nilai input dari field "comment"
+        const comment = document.getElementById("comment").value;
+
+        // Mengambil nilai input dari field "from"
+        const from = document.getElementById("from").value;
+
+        // Membuat elemen <p> baru untuk menampilkan komentar
+        const commentItem = document.createElement("p");
+
+        // Menetapkan teks pada elemen <p> dengan format "komentar - dari"
+        commentItem.textContent = `${comment} - ${from}`;
+
+        // Menambahkan elemen <p> ke dalam <div> "commentList"
+        commentList.appendChild(commentItem);
+
+        // Mengosongkan (reset) formulir setelah komentar ditambahkan
+        document.querySelector("form[name=commentForm]").reset();
+    }
+</script>
+
+</body>
+</html>

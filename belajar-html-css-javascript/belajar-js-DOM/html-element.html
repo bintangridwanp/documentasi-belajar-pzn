@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Element</title>
+</head>
+<body>
+<!-- Elemen <a> dengan id "link" yang akan dimodifikasi melalui JavaScript -->
+<a id="link"></a>
+
+<script>
+    // Mengambil elemen <a> dengan id "link"
+    const link = document.getElementById("link");
+
+    // Menetapkan URL tujuan dari tautan
+    link.href = "https://www.programmerzamannow.com";
+
+    // Menetapkan target untuk membuka tautan di jendela baru
+    link.target = "_blank";
+
+    // Menetapkan teks yang akan ditampilkan dalam tautan
+    link.textContent = "Website Programmer Zaman Now";
+</script>
+
+</body>
+</html>
+

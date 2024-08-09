@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Id Selector</title>
+</head>
+<body>
+
+<!-- Daftar dengan beberapa item, di mana satu item memiliki id "menu2" -->
+<ul>
+    <li class="menuItem">First</li>
+    <li id="menu2">Second</li>
+    <li class="menuItem">Third</li>
+</ul>
+
+<script>
+    // Menggunakan selektor ID ("#menu2") untuk memilih elemen dengan id "menu2"
+    const menuItems = document.querySelectorAll("#menu2");
+
+    // Menampilkan NodeList dari elemen dengan id "menu2" ke konsol
+    console.info(menuItems);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Table</title>
+</head>
+<body>
+<!-- Tabel dengan ID "orderRevenue" -->
+<table id="orderRevenue" border="1">
+    <!-- Caption atau judul tabel -->
+    <caption>Order Revenue</caption>
+
+    <!-- Bagian kepala tabel -->
+    <thead>
+    <tr>
+        <th>Month</th>
+        <th>Income</th>
+    </tr>
+    </thead>
+
+    <!-- Bagian tubuh tabel -->
+    <tbody>
+    <tr>
+        <td>January</td>
+        <td>100.000.000</td>
+    </tr>
+    <tr>
+        <td>February</td>
+        <td>200.000.000</td>
+    </tr>
+    </tbody>
+
+    <!-- Bagian kaki tabel -->
+    <tfoot>
+    <tr>
+        <td>Total</td>
+        <td>300.000.000</td>
+    </tr>
+    </tfoot>
+</table>
+
+<script>
+    // Mengambil elemen tabel dengan ID "orderRevenue"
+    const table = document.getElementById("orderRevenue");
+
+    // Menampilkan elemen caption dari tabel
+    console.info(table.caption);
+
+    // Menampilkan elemen thead dari tabel
+    console.info(table.tHead);
+
+    // Menampilkan koleksi elemen tbody dari tabel (karena bisa lebih dari satu)
+    console.info(table.tBodies);
+
+    // Menampilkan elemen tfoot dari tabel
+    console.info(table.tFoot);
+
+    // Menampilkan koleksi baris (rows) dari tabel
+    console.info(table.rows);
+</script>
+</body>
+</html>

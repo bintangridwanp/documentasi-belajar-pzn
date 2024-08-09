@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Style</title>
+</head>
+<body>
+<!-- Tombol untuk memilih warna -->
+<input type="button" value="blue">
+<input type="button" value="red">
+<input type="button" value="yellow">
+
+<!-- Elemen div yang akan berubah warna -->
+<div id="canvas" style="width: 500px; height: 500px; background-color: black"></div>
+
+<script>
+    // Mengambil elemen div dengan id "canvas"
+    const canvas = document.getElementById("canvas");
+
+    // Mengambil semua elemen input (tombol) di dalam dokumen
+    const buttons = document.querySelectorAll("input");
+
+    // Loop melalui semua tombol
+    for (let button of buttons) {
+        // Menambahkan event handler untuk event "click" pada setiap tombol
+        button.onclick = function () {
+            // Mengubah warna background dari elemen "canvas"
+            // berdasarkan nilai dari atribut "value" tombol yang diklik
+            canvas.style.backgroundColor = button.getAttribute("value");
+        };
+    }
+</script>
+</body>
+</html>

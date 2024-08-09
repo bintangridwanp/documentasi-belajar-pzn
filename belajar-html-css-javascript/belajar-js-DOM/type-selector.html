@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Type Selector</title>
+</head>
+<body>
+
+<!-- Daftar pertama dengan dua item -->
+<ul>
+    <li>Satu</li>
+    <li>Dua</li>
+</ul>
+
+<!-- Daftar kedua dengan tiga item -->
+<ul>
+    <li>Tiga</li>
+    <li>Empat</li>
+    <li>Lima</li>
+</ul>
+
+<script>
+    // Menggunakan selektor tipe ("li") untuk memilih semua elemen <li> dalam dokumen
+    const list = document.querySelectorAll("li");
+
+    // Menampilkan NodeList dari semua elemen <li> yang dipilih ke konsol
+    console.info(list);
+</script>
+
+</body>
+</html>

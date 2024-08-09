@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Window</title>
+</head>
+<body>
+
+<!-- Paragraf yang akan menampilkan informasi ukuran jendela -->
+<p id="content"></p>
+
+<!-- Paragraf yang akan menampilkan URL lokasi saat ini -->
+<p id="location"></p>
+
+<script>
+    // Mengambil elemen dengan id "content" dan "location"
+    const content = document.getElementById("content");
+    const locationParagraph = document.getElementById("location");
+
+    // Mendapatkan tinggi dan lebar layar dari window
+    const height = window.screen.height;
+    const width = window.screen.width;
+
+    // Mendapatkan URL lokasi saat ini
+    const url = window.location;
+
+    // Menampilkan lebar dan tinggi jendela di elemen "content"
+    content.textContent = `Window width: ${width}, height: ${height}`;
+
+    // Menampilkan URL lokasi saat ini di elemen "locationParagraph"
+    locationParagraph.textContent = url;
+</script>
+
+</body>
+</html>

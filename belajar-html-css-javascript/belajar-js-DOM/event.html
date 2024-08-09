@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event</title>
+</head>
+<body>
+<h1 id="text">Click Yellow Box</h1>
+<div id="canvas" style="width: 500px; height: 500px; background-color: darkslateblue"></div>
+
+<script>
+    // Mengambil elemen dengan id "canvas" dan "text"
+    const canvas = document.getElementById("canvas");
+    const text = document.getElementById("text");
+
+    // Menambahkan event handler untuk event "click" pada elemen "canvas"
+    canvas.onclick = function (event) {
+        // Mengubah teks elemen "text" menjadi koordinat di mana pengguna mengklik dalam canvas
+        text.textContent = `You clicked at (${event.x}, ${event.y})`;
+    };
+</script>
+
+</body>
+</html>

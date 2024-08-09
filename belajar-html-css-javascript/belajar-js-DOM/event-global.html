@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Target</title>
+</head>
+<body>
+<input id="clickMe" type="button" value="Click Me!">
+
+<script>
+    // Mengambil elemen dengan id "clickMe" dan menyimpannya dalam variabel 'button'
+    const button = document.getElementById("clickMe");
+
+    // Menambahkan event handler 'onclick' ke elemen 'button'
+    button.onclick = function () {
+        // Mengubah nilai atribut "value" dari tombol menjadi "You Already Click Me!"
+        button.setAttribute("value", "You Already Click Me!");
+
+        // Menampilkan pesan ke console saat tombol diklik
+        console.log('Button di Click');
+    };
+</script>
+
+</body>
+</html>

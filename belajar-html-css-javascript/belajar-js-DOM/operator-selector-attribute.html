@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attribute Selector</title>
+</head>
+<body>
+<div class="D">Monkey</div>
+<div class="Dluffy">D</div>
+<div class="Dmonkey"><Luffy></Luffy></div>
+
+<script>
+
+    const list = document.querySelectorAll("div[class^=D]");
+    console.info(list);
+
+</script>
+
+</body>
+</html>

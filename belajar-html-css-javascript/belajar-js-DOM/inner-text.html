@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inner Text</title>
+</head>
+<body>
+
+<!-- Paragraf dengan konten HTML dan JavaScript -->
+<p id="content">
+    <script>
+        console.info("Hello World");
+    </script>
+    <b>monkey</b> D <i>luffy</i>
+</p>
+
+<script>
+    // Mengambil elemen dengan id "content"
+    const content = document.getElementById("content");
+
+    // Menampilkan teks konten dari elemen "content" termasuk semua teks, bahkan yang tersembunyi
+    console.info(content.textContent);
+
+    // Menampilkan teks konten dari elemen "content" tetapi hanya teks yang terlihat
+    console.info(content.innerText);
+
+    // Menampilkan konten HTML dari elemen "content"
+    console.info(content.innerHTML);
+</script>
+
+</body>
+</html>

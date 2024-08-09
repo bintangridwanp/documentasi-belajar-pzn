@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attribute Selector</title>
+</head>
+<body>
+
+<!-- Beberapa elemen div dengan class yang berbeda -->
+<div class="monkey">Monkey</div>
+<div class="D">D</div>
+<div class="luffy">Luffy</div>
+
+<script>
+    // Menggunakan selektor atribut ("[class]") untuk memilih semua elemen yang memiliki atribut class
+    const list = document.querySelectorAll("[class]");
+
+    // Menampilkan NodeList dari semua elemen yang memiliki atribut class ke konsol
+    console.info(list);
+</script>
+
+</body>
+</html>

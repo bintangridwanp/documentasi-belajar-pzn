@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class Selector</title>
+</head>
+<body>
+
+<!-- Daftar dengan beberapa item, di mana beberapa memiliki class "menuItem" -->
+<ul>
+    <li class="menuItem">First</li>
+    <li>Second</li>
+    <li class="menuItem">Third</li>
+</ul>
+
+<script>
+    // Menggunakan selektor class (".menuItem") untuk memilih semua elemen dengan class "menuItem"
+    const menuItems = document.querySelectorAll(".menuItem");
+
+    // Menampilkan NodeList dari semua elemen dengan class "menuItem" ke konsol
+    console.info(menuItems);
+</script>
+
+</body>
+</html>
