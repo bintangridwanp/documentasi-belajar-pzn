@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Set Timeout</title>
+</head>
+<body>
+<script>
+
+    // Fungsi untuk menambahkan elemen baru ke dalam body halaman
+    function addElement(){
+        const header = document.createElement("h1"); // Membuat elemen h1 baru
+        header.textContent = "Luffy D Monkey"; // Mengatur teks pada elemen h1
+
+        document.body.appendChild(header); // Menambahkan elemen h1 ke dalam body
+    }
+
+    // Menjalankan fungsi addElement setelah 5000 milidetik (5 detik)
+    setTimeout(addElement, 5000);
+    console.info("Otw One Peice"); // Mencetak pesan ke konsol bahwa program telah selesai
+
+</script>
+</body>
+</html>

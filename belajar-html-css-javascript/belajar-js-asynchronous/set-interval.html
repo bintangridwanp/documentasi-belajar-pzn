@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Set Interval</title>
+</head>
+<body>
+<h1 id="header"></h1> <!-- Elemen h1 dengan id "header" untuk menampilkan waktu -->
+<script>
+
+    // Fungsi untuk mengupdate teks pada elemen h1 dengan waktu saat ini
+    function setTime(){
+        const header = document.getElementById("header"); // Mendapatkan elemen h1 dengan id "header"
+        header.textContent = new Date().toString(); // Mengatur teks elemen h1 menjadi waktu saat ini dalam format string
+    }
+
+    // Menjalankan fungsi setTime setiap 1000 milidetik (1 detik)
+    setInterval(setTime, 1000);
+    console.info("Program Selesai"); // Mencetak pesan ke konsol bahwa program telah selesai
+
+</script>
+</body>
+</html>
