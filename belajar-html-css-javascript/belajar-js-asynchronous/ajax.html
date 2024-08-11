@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX</title>
+</head>
+<body>
+<h1 id="response"></h1> <!-- Elemen h1 untuk menampilkan respon dari server -->
+<script>
+
+    // Membuat objek XMLHttpRequest untuk melakukan permintaan AJAX
+    const ajax = new XMLHttpRequest();
+
+    // Membuka koneksi HTTP GET ke endpoint "api/hello.json"
+    ajax.open("GET", "api/hello.json");
+
+    // Menambahkan event listener untuk menangani respon ketika data berhasil dimuat
+    ajax.addEventListener("load", function (){
+        const json = JSON.parse(ajax.responseText); // Parsing respon teks sebagai JSON
+
+        const header = document.getElementById("response"); // Mendapatkan elemen h1 dengan id "response"
+        header.textContent = json.response; // Mengatur teks elemen h1 dengan data dari JSON
+    });
+
+    // Mengirim permintaan AJAX ke server
+    ajax.send();
+
+</script>
+</body>
+</html>

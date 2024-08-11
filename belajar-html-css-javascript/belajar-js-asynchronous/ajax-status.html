@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX with Status</title>
+</head>
+<body>
+<h1 id="response"></h1> <!-- Elemen h1 untuk menampilkan respon dari server -->
+<script>
+
+    // Fungsi untuk menampilkan respon ke elemen h1
+    function displayResponse(json) {
+        const header = document.getElementById("response"); // Mendapatkan elemen h1 dengan id "response"
+        header.textContent = json.response; // Mengatur teks elemen h1 dengan data dari JSON
+    }
+
+    // Membuat objek XMLHttpRequest untuk melakukan permintaan AJAX
+    const ajax = new XMLHttpRequest();
+
+    // Menambahkan event listener untuk memonitor perubahan state dari AJAX
+    ajax.onreadystatechange = function (){
+        console.info(`Ready State Change ${ajax.readyState}`); // Mencetak perubahan state ke konsol
+    };
+
+    // Membuka koneksi HTTP GET ke endpoint yang salah "api/salah.json"
+    ajax.open("GET", "api/salah.json");
+
+    // Menambahkan event listener untuk menangani respon ketika data berhasil dimuat
+    ajax.addEventListener("load", function () {
+        if (ajax.status === 200) { // Mengecek apakah status HTTP adalah 200 (berhasil)
+            const json = JSON.parse(ajax.responseText); // Parsing respon teks sebagai JSON
+            displayResponse(json); // Menampilkan respon jika berhasil
+        } else { // Jika status bukan 200 (gagal)
+            displayResponse({
+                response: `Terjadi Kesalahan dengan status ${ajax.status}` // Menampilkan pesan kesalahan dengan status
+            })
+        }
+    });
+
+    // Mengirim permintaan AJAX ke server
+    ajax.send();
+
+</script>
+</body>
+</html>
