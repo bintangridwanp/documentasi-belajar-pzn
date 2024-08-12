@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ajax Send Form Data</title> <!-- Judul diperbarui untuk mencerminkan pengiriman data form -->
+</head>
+<body>
+<form>
+  <!-- Form untuk memasukkan username dan password -->
+  <label for="username">Username:
+    <input type="text" id="username" name="username">
+  </label>
+  <br>
+  <label for="password">Password:
+    <input type="password" id="password" name="password">
+  </label>
+  <br>
+  <!-- Tombol untuk melakukan login -->
+  <input type="button" id="login" value="Login">
+</form>
+<h1 id="response"></h1> <!-- Elemen h1 untuk menampilkan respon dari server -->
+<script>
+
+  // Fungsi untuk melakukan login
+  function doLogin() {
+    const ajax = new XMLHttpRequest(); // Membuat objek XMLHttpRequest
+    ajax.open("POST", "https://eodbas1cttv7v6m.m.pipedream.net"); // Membuka koneksi HTTP POST ke URL
+    ajax.onload = function () {
+      const response = document.getElementById("response"); // Mendapatkan elemen h1 dengan id "response"
+      response.innerText = ajax.responseText; // Menampilkan respon server di dalam elemen h1
+    }
+
+    // Mengatur header permintaan untuk mengirim data dalam format x-www-form-urlencoded
+    ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+    // Membuat objek URLSearchParams untuk mengirim data form
+    const form = new URLSearchParams();
+    form.append("username", document.getElementById("username").value); // Menambahkan data username
+    form.append("password", document.getElementById("password").value); // Menambahkan data password
+
+    // Mengirim data form ke server
+    ajax.send(form);
+  }
+
+  // Menambahkan event listener pada tombol login untuk menjalankan fungsi doLogin ketika tombol diklik
+  document.getElementById("login").onclick = doLogin;
+
+</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Promise</title>
+</head>
+<body>
+
+<table>
+  <tbody>
+  <tr>
+    <td>Id :</td>
+    <td id="id"></td> <!-- Tempat untuk menampilkan ID produk -->
+  </tr>
+  <tr>
+    <td>Name :</td>
+    <td id="name"></td> <!-- Tempat untuk menampilkan nama produk -->
+  </tr>
+  <tr>
+    <td>Price :</td>
+    <td id="price"></td> <!-- Tempat untuk menampilkan harga produk -->
+  </tr>
+  </tbody>
+</table>
+
+<script>
+
+  // Fungsi untuk mendapatkan data produk menggunakan Promise
+  function getProduct(product) {
+    return new Promise(function (resolve, reject) {
+
+      const ajax = new XMLHttpRequest(); // Membuat objek XMLHttpRequest
+      ajax.open("GET", `api/${product}.json`); // Membuka koneksi HTTP GET ke endpoint API produk
+      ajax.onload = function () {
+        if (ajax.status === 200) { // Jika status HTTP adalah 200 (berhasil)
+          resolve(ajax.responseText); // Resolve promise dengan respon teks dari server
+        } else { // Jika status HTTP bukan 200 (gagal)
+          reject(`Error Get Product with response : ${ajax.status}`); // Reject promise dengan pesan kesalahan
+        }
+      };
+      ajax.send(); // Mengirim permintaan AJAX ke server
+
+    });
+  }
+
+  // Memanggil fungsi getProduct dan menangani hasilnya dengan chaining
+  getProduct("product")
+          .then(function (response) {
+            return JSON.parse(response); // Parsing respon JSON
+          })
+          .then(function (json) {
+            // Menampilkan data produk di elemen tabel
+            document.getElementById("id").textContent = json.id;
+            document.getElementById("name").textContent = json.name;
+            document.getElementById("price").textContent = json.price;
+          })
+          .catch(function (error) {
+            // Menampilkan pesan kesalahan jika terjadi error
+            document.getElementById("id").textContent = error;
+            document.getElementById("name").textContent = error;
+            document.getElementById("price").textContent = error;
+          })
+          .finally(function () {
+            console.info("Finally"); // Menampilkan pesan di console ketika Promise selesai
+          })
+
+</script>
+
+</body>
+</html>

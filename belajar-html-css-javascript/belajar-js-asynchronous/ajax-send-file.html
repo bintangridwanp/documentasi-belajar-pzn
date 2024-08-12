@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax Send File</title>
+</head>
+<body>
+<h1>Register</h1>
+<form>
+    <!-- Form untuk memasukkan username, nama, dan mengunggah file profil -->
+    <label for="username">Username:
+        <input type="text" id="username" name="username">
+    </label>
+    <br>
+    <label for="name">Name:
+        <input type="text" id="name" name="name">
+    </label>
+    <br>
+    <label for="profile">Profile:
+        <input type="file" id="profile" name="profile">
+    </label>
+    <br>
+    <!-- Tombol untuk melakukan registrasi -->
+    <input type="button" id="register" value="Register">
+</form>
+<h1 id="response"></h1> <!-- Elemen h1 untuk menampilkan respon dari server -->
+<script>
+
+    // Fungsi untuk melakukan registrasi
+    function doLogin() {
+        const ajax = new XMLHttpRequest(); // Membuat objek XMLHttpRequest
+        ajax.open("POST", "https://hookb.in/r19B7Kmn3PSqk2XXkwqb"); // Membuka koneksi HTTP POST ke URL
+        ajax.onload = function () {
+            const response = document.getElementById("response"); // Mendapatkan elemen h1 dengan id "response"
+            response.innerText = ajax.responseText; // Menampilkan respon server di dalam elemen h1
+        }
+
+        // Membuat objek FormData untuk mengirim data form termasuk file
+        const form = new FormData();
+        form.append("username", document.getElementById("username").value); // Menambahkan data username
+        form.append("name", document.getElementById("name").value); // Menambahkan data nama
+
+        // Mendapatkan file yang dipilih dari input file
+        const files = document.getElementById("profile").files;
+        const firstFile = files.item(0); // Mengambil file pertama (jika ada)
+
+        // Menambahkan file ke dalam form data
+        form.append("profile", firstFile);
+
+        // Mengirim data form ke server
+        ajax.send(form);
+    }
+
+    // Menambahkan event listener pada tombol register untuk menjalankan fungsi doLogin ketika tombol diklik
+    document.getElementById("register").onclick = doLogin;
+
+</script>
+</body>
+</html>

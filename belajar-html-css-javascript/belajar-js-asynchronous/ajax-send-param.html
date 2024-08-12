@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax Send Query Param</title>
+</head>
+<body>
+<form>
+    <!-- Form untuk memasukkan kata pencarian -->
+    <label for="search">Search:
+        <input type="text" id="search" name="search">
+    </label>
+    <br>
+    <!-- Tombol untuk melakukan pencarian -->
+    <input type="button" id="searchButton" value="Search">
+</form>
+<h1 id="response"></h1> <!-- Elemen h1 untuk menampilkan respon dari server -->
+<script>
+
+    // Fungsi untuk melakukan pencarian
+    function doSearch() {
+        const ajax = new XMLHttpRequest(); // Membuat objek XMLHttpRequest
+
+        // Membuat objek URLSearchParams untuk menampung parameter query
+        const param = new URLSearchParams();
+        param.append("search", document.getElementById("search").value); // Menambahkan parameter 'search'
+        param.append("filter", document.getElementById("search").value); // Menambahkan parameter 'filter'
+
+        // Membuka koneksi HTTP GET dengan URL yang sudah diberi parameter query
+        ajax.open("GET", `https://eodbas1cttv7v6m.m.pipedream.net?${param.toString()}`);
+
+        // Menambahkan event listener untuk menampilkan respon server ketika data berhasil dimuat
+        ajax.onload = function () {
+            const response = document.getElementById("response"); // Mendapatkan elemen h1 dengan id "response"
+            response.innerText = ajax.responseText; // Menampilkan respon server di dalam elemen h1
+        }
+
+        // Mengirim permintaan AJAX ke server
+        ajax.send();
+    }
+
+    // Menambahkan event listener pada tombol search untuk menjalankan fungsi doSearch ketika tombol diklik
+    document.getElementById("searchButton").onclick = doSearch;
+
+</script>
+</body>
+</html>

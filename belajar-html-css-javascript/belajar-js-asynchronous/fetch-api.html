@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fetch API</title>
+</head>
+<body>
+<form>
+    <label for="username">Username:
+        <input type="text" id="username" name="username">
+    </label>
+    <br>
+    <label for="password">Password:
+        <input type="password" id="password" name="password">
+    </label>
+    <br>
+    <input type="button" id="login" value="Login"> <!-- Tombol untuk memicu login -->
+</form>
+<h1 id="response"></h1> <!-- Tempat untuk menampilkan respon dari server -->
+<script>
+
+    function doLogin(){
+        // Membuat request baru dengan metode POST ke URL yang ditentukan
+        const request = new Request("https://hookb.in/r19B7Kmn3PSqk2XXkwqb", {
+            method: "POST", // Metode HTTP POST
+            headers: {
+                "Content-Type": "application/json", // Mengatur tipe konten menjadi JSON
+                "Accept": "application/json" // Menerima respon dalam format JSON
+            },
+            // Mengirim data login dalam bentuk JSON
+            body: JSON.stringify({
+                username: document.getElementById("username").value, // Mengambil nilai username dari input
+                password: document.getElementById("password").value // Mengambil nilai password dari input
+            })
+        });
+
+        // Melakukan fetch request dan mengembalikan Promise<Response>
+        const response = fetch(request);
+
+        response
+            .then((response) => response.json()) // Parsing respon menjadi JSON
+            .then(function (json){
+                // Menampilkan hasil respon dari server
+                document.getElementById("response").textContent = json.success;
+            })
+            .catch(function (error){
+                // Menampilkan pesan kesalahan jika terjadi error
+                document.getElementById("response").textContent = error;
+            })
+
+    }
+
+    document.getElementById("login").onclick = doLogin; // Memicu fungsi doLogin saat tombol diklik
+
+</script>
+</body>
+</html>
