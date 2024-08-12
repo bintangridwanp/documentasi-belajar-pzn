@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Async</title>
+</head>
+<body>
+<script>
+
+    // Fungsi ini mengembalikan sebuah Promise yang akan segera resolve dengan nilai "Eko Promise"
+    function getNamePromise() {
+        return new Promise(function (resolve, reject) {
+            resolve("Luffy Promise"); // Janji terpenuhi dengan nilai "Eko Promise"
+        });
+    }
+
+    // Fungsi async ini juga mengembalikan sebuah Promise yang secara implisit resolve dengan nilai "Eko Async"
+    async function getNameAsync(){
+        return "Luffy Async"; // Mengembalikan "Eko Async" sebagai hasil promise
+    }
+
+    // Memanggil getNamePromise() dan menampilkan hasilnya setelah promise terpenuhi
+    getNamePromise()
+        .then((name) => console.info(name)); // Output: "Eko Promise"
+
+    // Memanggil getNameAsync() dan menampilkan hasilnya setelah promise terpenuhi
+    getNameAsync()
+        .then((name) => console.info(name)); // Output: "Eko Async"
+
+</script>
+</body>
+</html>

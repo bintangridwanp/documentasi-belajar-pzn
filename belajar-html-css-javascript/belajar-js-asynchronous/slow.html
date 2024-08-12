@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slow</title>
+</head>
+<body>
+<button id="buttonTask">Click Me</button>
+
+<script>
+
+    // Fungsi slowLog melakukan logging angka dari 0 hingga nilai total-1 di konsol
+    function slowLog(total){
+        for (let i = 0; i < total; i++) {
+            console.info(i); // Mencetak angka i ke konsol
+        }
+    }
+
+    // Menangani event klik pada tombol dengan id "buttonTask"
+    document.getElementById("buttonTask").onclick = function (){
+        console.info("Start"); // Mencetak "Start" ke konsol
+        slowLog(100000); // Memanggil fungsi slowLog dengan 100000 sebagai parameter
+        console.info("End"); // Mencetak "End" ke konsol setelah slowLog selesai
+    };
+
+</script>
+
+</body>
+</html>

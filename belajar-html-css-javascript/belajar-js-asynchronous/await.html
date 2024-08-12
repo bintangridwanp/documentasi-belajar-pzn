@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Await</title>
+</head>
+<body>
+<script>
+
+    // Fungsi untuk mendapatkan produk yang mengembalikan Promise<JSON Product>
+    function getProduct() {
+        const request = new Request("api/productsalah.json", { // Membuat request baru ke endpoint API
+            method: "GET" // Menggunakan metode HTTP GET
+        });
+
+        const response = fetch(request); // Melakukan fetch request dan mengembalikan Promise<Response>
+
+        // Mengambil dan mengembalikan response dalam format JSON
+        return response.then((response) => response.json());
+    }
+
+    // Fungsi ini mengembalikan Promise<String> yang berisi nama produk
+    function getProductNamePromise() {
+        return new Promise(function (resolve, reject) {
+            getProduct()
+                .then((product) => resolve(product.name)) // Jika berhasil, kembalikan nama produk
+                .catch((error) => resolve("Product Not Found")); // Jika gagal, kembalikan pesan error
+        })
+    }
+
+    // Fungsi async yang melakukan hal serupa dengan getProductNamePromise, tetapi dengan async/await
+    async function getProductNameAsync() {
+        try {
+            const product = await getProduct(); // Menunggu hasil dari getProduct()
+            return product.name; // Mengembalikan nama produk
+        } catch (e) {
+            return "Product Not Found"; // Jika terjadi kesalahan, kembalikan pesan error
+        } finally {
+            // Blok finally yang dapat digunakan untuk cleanup atau logging (opsional)
+        }
+    }
+
+    // Memanggil getProductNamePromise dan menampilkan hasilnya di konsol
+    getProductNamePromise()
+        .then((productName) => console.info(productName));
+
+    // Memanggil getProductNameAsync dan menampilkan hasilnya di konsol
+    getProductNameAsync()
+        .then((productName) => console.info(productName));
+
+</script>
+</body>
+</html>
