@@ -6,21 +6,26 @@ import (
 )
 
 func main() {
-	var data *list.List = list.New()
+	var data *list.List = list.New() // Membuat list baru (doubly linked list)
 
-	data.PushBack("Eko")
-	data.PushBack("Kurniawan")
-	data.PushBack("Khannedy")
+	// Menambahkan elemen ke dalam list
+	data.PushBack("luffy")
+	data.PushBack("D")
+	data.PushBack("monkey")
 
+	// Mengambil elemen pertama dari list
 	var head *list.Element = data.Front()
-	fmt.Println(head.Value) // eko
+	fmt.Println(head.Value) // Menampilkan elemen pertama ("luffy")
 
-	next := head.Next() // kurniawan
+	// Mengambil dan menampilkan elemen selanjutnya ("D")
+	next := head.Next()
 	fmt.Println(next.Value)
 
-	next = next.Next() // khannedy
+	// Mengambil dan menampilkan elemen selanjutnya ("monkey")
+	next = next.Next()
 	fmt.Println(next.Value)
 
+	// Iterasi dan menampilkan semua elemen dalam list
 	for e := data.Front(); e != nil; e = e.Next() {
 		fmt.Println(e.Value)
 	}
