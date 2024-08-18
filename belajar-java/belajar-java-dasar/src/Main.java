@@ -1,5 +1,5 @@
 public class Main {
-    public static void main(String[] args) {
+    public static void main(TipeDataString[] args) {
         System.out.println("Hello world!");
     }
 }
