@@ -1,14 +1,16 @@
 public class ParentsApp {
     public static void main(String[] args) {
 
-    var father  = new Father();
-    father.name = "tono";
+    var father  = new Father("Luffy");
+    father.sapaHalo("Koby");
 
-    father.sapaHalo("gorosei");
+    var mother = new Mother("Nami");
+    mother.sapaHalo("Nico Robin");
 
-    var mother = new Mother();
-    mother.name = "mulyono";
+        System.out.println(mother);
+        System.out.println(mother.toString());
+        System.out.println(father);
+        System.out.println(father.toString());
 
-    mother.sapaHalo("sri");
     }
 }
