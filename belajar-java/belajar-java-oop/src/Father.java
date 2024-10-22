@@ -1,12 +1,11 @@
-public class Father {
-    String name;
+public class Father extends Nenek {
     String pekerjaan;
 
     Father(String name) {
-        this.name = name;
+        super(name);
     }
     Father(String nama, String pekerjaan) {
-        this.name = nama;
+        super(nama);
         this.pekerjaan = pekerjaan;
     }
 
