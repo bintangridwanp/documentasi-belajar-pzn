@@ -15,7 +15,16 @@ public class polymorphismeApp {
         sapaHalo(new Mother("tiga"));
 
     }
-        static void sapaHalo(Nenek nenek){
-            System.out.println("Halo " + nenek.name);
+    static void sapaHalo(Nenek nenek){
+        if(nenek instanceof Father){
+            Father father = (Father) nenek;
+            System.out.println("Halo father " + father.name);
+        } else if (nenek instanceof Mother) {
+            Mother mother = (Mother) nenek;
+            System.out.println("Halo mother " + mother.name);
+        } else {
+            System.out.println("Halo non father and non mother " + nenek.name);
         }
+
+    }
 }
