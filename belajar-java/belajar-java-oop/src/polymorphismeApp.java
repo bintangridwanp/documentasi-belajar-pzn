@@ -10,7 +10,7 @@ public class polymorphismeApp {
         nenek = new Mother("nico robin");
         nenek.sapaHalo("kobi");
 
-        sapaHalo(new Nenek("satu"));
+        sapaHalo(new Nenek("bintangridwanp"));
         sapaHalo(new Father("dua"));
         sapaHalo(new Mother("tiga"));
 
