@@ -12,3 +12,4 @@ console.info(os.freemem());
 console.info(os.totalmem());
 console.info(os.type());
 console.info(os.uptime());
+console.log(os.platform());
