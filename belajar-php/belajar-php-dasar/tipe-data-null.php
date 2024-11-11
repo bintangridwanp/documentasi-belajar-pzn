@@ -28,3 +28,16 @@ echo "\n";
 
 unset ($contoh);
 echo $contoh;
+
+echo "\n";
+
+//mengecek suatu variable ada atau tidak
+$contoh = "D";
+echo $contoh;
+$contoh = null;
+
+echo "\n";
+
+var_dump(isset($contoh));
+
+
