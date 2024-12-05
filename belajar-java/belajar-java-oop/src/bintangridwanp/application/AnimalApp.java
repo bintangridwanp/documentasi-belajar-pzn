@@ -5,11 +5,8 @@ import bintangridwanp.data.Cat;
 
 public class AnimalApp {
     public static void main(String[] args) {
-
         Binatang binatang = new Cat();
         binatang.name = "Kucing";
         binatang.suara();
-
-
     }
 }
