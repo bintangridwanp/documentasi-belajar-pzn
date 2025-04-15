@@ -2,7 +2,9 @@
 
 class Person
 {
-    var $nama;
-    var $alamat;
-    var $negara;
+    var string $nama;
+    var ? sring $nomerhp = null;
+    var string $alamat;
+    // Default value for negara
+    var string $negara = "Indonesia";
 }
