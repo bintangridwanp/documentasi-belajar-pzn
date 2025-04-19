@@ -2,17 +2,17 @@
 
 require_once 'data/Person.php';
 
-$Person1 = new Person();
+$Person1 = new Person("Joke", "Solo");
 $Person1 -> nama = "Joko";
 $Person1 -> alamat = "Solo";
 $Person1 -> negara = "Indonesia";
 
-$Person2 = new Person();
+$Person2 = new Person("Budi", "Jakarta");
 $Person2 -> nama = "Budi";
 $Person2 -> alamat = "Jakarta";
 $Person2 -> negara = "Indonesia";
 
-$Person3  = new Person();
+$Person3  = new Person("Siti", "Bandung");
 $Person3 -> nama = "Siti";
 $Person3 -> alamat = "Bandung";
 
