@@ -5,33 +5,28 @@ import (
 	"fmt"
 )
 
+// Mendeklarasikan dua error khusus untuk digunakan dalam fungsi DapatkanId
 var (
-	// Mendefinisikan dua variabel error dengan pesan kesalahan yang berbeda
 	MenemukanError      = errors.New("validation error")
 	TidakMenemukanError = errors.New("tidak menemukan error")
 )
 
-// Fungsi DapatkanId memeriksa nilai id dan mengembalikan error berdasarkan kondisi tertentu
+// DapatkanId adalah fungsi yang menerima id sebagai parameter dan mengembalikan error
 func DapatkanId(id string) error {
-	// Jika id kosong, kembalikan MenemukanError
 	if id == "" {
 		return MenemukanError
 	}
-
-	// Jika id adalah "OnePiece", kembalikan TidakMenemukanError
 	if id == "OnePiece" {
 		return TidakMenemukanError
 	}
 
-	// Jika id valid dan tidak memenuhi kondisi di atas, kembalikan nil (tidak ada error)
 	return nil
 }
 
+// main adalah fungsi utama yang memanggil DapatkanId dan menangani error yang dikembalikan
 func main() {
-	// Memanggil fungsi DapatkanId dengan id kosong dan menyimpan hasilnya di variabel rere
-	rere := DapatkanId("")
+	rere := DapatkanId("OnePiece")
 
-	// Memeriksa jenis error yang dikembalikan oleh DapatkanId dan mencetak pesan yang sesuai
 	if errors.Is(rere, MenemukanError) {
 		fmt.Println("menemukan error")
 	} else if errors.Is(rere, TidakMenemukanError) {

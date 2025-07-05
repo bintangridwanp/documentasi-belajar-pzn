@@ -7,17 +7,20 @@ import (
 
 func main() {
 
-	args := os.Args // Mengambil argumen baris perintah yang diberikan saat menjalankan program
+	// Menggunakan os.Args untuk mengambil argumen dari baris perintah
+	args := os.Args
 
-	for _, arg := range args { // Mengiterasi setiap argumen
-		fmt.Println(arg) // Menampilkan argumen ke konsol
+	// os.Args adalah slice yang berisi argumen baris perintah
+	for _, arg := range args {
+		fmt.Println(arg)
 	}
 
-	hostname, err := os.Hostname() // Mengambil nama host dari sistem
+	// Menggunakan os.Getenv untuk mengambil nilai dari variabel lingkungan
+	hostname, err := os.Hostname()
 	if err == nil {
-		fmt.Println(hostname) // Menampilkan nama host jika tidak ada error
+		fmt.Println(hostname)
 	} else {
-		fmt.Println("Sedang ERROR", err.Error()) // Menampilkan pesan error jika terjadi masalah
+		fmt.Println("Sedang ERROR", err.Error())
 	}
 
 }
